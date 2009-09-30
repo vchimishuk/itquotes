@@ -1,0 +1,876 @@
+2009/09/01 16:01:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php/quote
+2009/09/01 16:01:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php/quote
+2009/09/01 16:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('post')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=post
+2009/09/01 16:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post/list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('post/list')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=post/list
+2009/09/01 16:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=quote
+2009/09/01 16:06:34 [error] [php] Missing argument 1 for CController::__construct(), called in /srv/vhosts/itquotes/protected/controllers/QuoteController.php on line 6 and defined (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:100)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(326): CWebApplication->createController()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#3 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote
+2009/09/01 16:08:30 [error] [php] require(application/controllers/quote/ListAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:232)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote
+2009/09/01 16:25:55 [error] [php] Object of class Tag could not be converted to string (/srv/vhosts/itquotes/protected/controllers/quote/ListAction.php:15)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote
+2009/09/01 16:29:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "edit".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('edit')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('edit')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/edit')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:30:23 [error] [php] include(EditAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:30:44 [error] [php] include(EditAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:31:42 [error] [php] include(EditAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:31:47 [error] [php] include(EditAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:32:57 [error] [php] Undefined variable: quote (/srv/vhosts/itquotes/protected/controllers/quote/EditAction.php:9)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:33:17 [error] [php] Trying to get property of non-object (/srv/vhosts/itquotes/protected/controllers/quote/EditAction.php:9)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:33:36 [error] [php] Trying to get property of non-object (/srv/vhosts/itquotes/protected/controllers/quote/EditAction.php:11)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 16:39:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Quote not found' in /srv/vhosts/itquotes/protected/controllers/quote/EditAction.php:9
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): EditAction->run()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(EditAction))
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(EditAction), Array)
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('edit')
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/edit')
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#7 {main} REQUEST_URI=/index.php?r=quote/edit
+2009/09/01 17:20:04 [error] [exception.CException] exception 'CException' with message 'ListAction does not have a method named "render".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:218
+Stack trace:
+#0 [internal function]: CComponent->__call('render', Array)
+#1 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(8): ListAction->render('list', Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(ListAction))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ListAction), Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/list')
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#9 {main} REQUEST_URI=/index.php?r=quote/list
+2009/09/01 17:20:55 [error] [exception.CException] exception 'CException' with message 'QuoteController cannot find the requested view "list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:710
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('list', Array, true)
+#1 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(8): CController->render('list', Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(ListAction))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ListAction), Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/list')
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#9 {main} REQUEST_URI=/index.php?r=quote/list
+2009/09/01 17:21:11 [error] [exception.CException] exception 'CException' with message 'QuoteController cannot find the requested view "site.list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:710
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('site.list', Array, true)
+#1 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(8): CController->render('site.list', Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(ListAction))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ListAction), Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/list')
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#9 {main} REQUEST_URI=/index.php?r=quote/list
+2009/09/01 17:21:16 [error] [exception.CException] exception 'CException' with message 'QuoteController cannot find the requested view "site/list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:710
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('site/list', Array, true)
+#1 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(8): CController->render('site/list', Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(ListAction))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ListAction), Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/list')
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#9 {main} REQUEST_URI=/index.php?r=quote/list
+2009/09/01 17:22:50 [error] [php] Object of class MainMenu could not be converted to string (/srv/vhosts/itquotes/protected/views/layouts/main.php:21)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(642): QuoteController->renderFile()
+#1 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(8): QuoteController->render()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): QuoteController->runAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=quote/list
+2009/09/01 17:39:34 [error] [php] require(/srv/vhosts/itquotes/protected/controllers/tag/EditAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:246)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): TagController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): TagController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): TagController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=tag/edit&id=2
+2009/09/01 17:42:45 [error] [php] require(/srv/vhosts/itquotes/protected/controllers/tag/EditAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:246)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): TagController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): TagController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): TagController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=tag/edit&id=2
+2009/09/02 09:59:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/
+2009/09/02 10:22:56 [error] [exception.CException] exception 'CException' with message 'Property "CRequiredValidator.0" is not defined.' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:154
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/validators/CValidator.php(140): CComponent->__set('0', 'length')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CModel.php(420): CValidator::createValidator('required', Object(Tag), 'nameRu', Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/db/ar/CActiveRecord.php(2209): CModel->createValidators()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/db/ar/CActiveRecord.php(1073): CActiveRecordMetaData->getValidators()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CModel.php(274): CActiveRecord->getValidators()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CModel.php(305): CModel->getValidatorsForAttribute('nameEn', '')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php(1049): CModel->isAttributeRequired('nameEn', '')
+#7 /srv/vhosts/itquotes/protected/views/tag/_form.php(4): CHtml::activeLabelEx(Object(Tag), 'nameEn')
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#11 /srv/vhosts/itquotes/protected/views/tag/edit.php(6): CController->renderPartial('_form', Array)
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#15 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('edit', Array, true)
+#16 /srv/vhosts/itquotes/protected/controllers/tag/EditAction.php(13): CController->render('edit', Array)
+#17 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): EditAction->run()
+#18 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(EditAction))
+#19 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(EditAction), Array)
+#20 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('edit')
+#21 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/edit')
+#22 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#23 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#24 {main} REQUEST_URI=/index.php?r=tag/edit&id=1
+2009/09/02 10:23:13 [error] [php] require(require.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:232)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CModel.php(420): createValidator()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/db/ar/CActiveRecord.php(2209): Tag->createValidators()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/db/ar/CActiveRecord.php(1073): CActiveRecordMetaData->getValidators()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CModel.php(274): Tag->getValidators()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CModel.php(305): Tag->getValidatorsForAttribute()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php(1049): Tag->isAttributeRequired()
+#6 /srv/vhosts/itquotes/protected/views/tag/_form.php(4): activeLabelEx()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): TagController->renderInternal()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): TagController->renderFile()
+#10 /srv/vhosts/itquotes/protected/views/tag/edit.php(6): TagController->renderPartial()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): TagController->renderInternal()
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): TagController->renderFile()
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): TagController->renderPartial()
+#15 /srv/vhosts/itquotes/protected/controllers/tag/EditAction.php(13): TagController->render()
+#16 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): EditAction->run()
+#17 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): TagController->runAction()
+#18 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): TagController->runActionWithFilters()
+#19 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): TagController->run()
+#20 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#21 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#22 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=tag/edit&id=1
+2009/09/02 10:34:14 [error] [exception.CException] exception 'CException' with message 'EditAction does not have a method named "redirect".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:218
+Stack trace:
+#0 [internal function]: CComponent->__call('redirect', Array)
+#1 /srv/vhosts/itquotes/protected/controllers/tag/EditAction.php(17): EditAction->redirect(Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): EditAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(EditAction))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(EditAction), Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('edit')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/edit')
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#9 {main} REQUEST_URI=/index.php?r=tag/edit&id=1
+2009/09/02 11:08:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=tag/add
+2009/09/02 11:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=tag/add
+2009/09/02 11:13:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=tag/add
+2009/09/02 11:13:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=tag/add
+2009/09/02 11:13:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=tag/add
+2009/09/02 11:13:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=tag/add
+2009/09/02 11:24:53 [error] [php] include(CDbriteria.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /srv/vhosts/itquotes/protected/controllers/tag/ListAction.php(6): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): TagController->runAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): TagController->runActionWithFilters()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): TagController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=tag/list
+2009/09/02 12:35:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('list')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/list')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/list
+2009/09/02 12:41:01 [error] [php] Object of class LoginForm could not be converted to string (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php:117)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#3 /srv/vhosts/itquotes/protected/views/profile/login.php(5): ProfileController->renderPartial()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): ProfileController->renderPartial()
+#8 /srv/vhosts/itquotes/protected/controllers/profile/LoginAction.php(20): ProfileController->render()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): LoginAction->run()
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): ProfileController->runAction()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#15 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile
+2009/09/02 12:41:04 [error] [php] Object of class LoginForm could not be converted to string (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php:117)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#3 /srv/vhosts/itquotes/protected/views/profile/login.php(5): ProfileController->renderPartial()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): ProfileController->renderPartial()
+#8 /srv/vhosts/itquotes/protected/controllers/profile/LoginAction.php(20): ProfileController->render()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): LoginAction->run()
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): ProfileController->runAction()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#15 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile
+2009/09/02 12:42:15 [error] [php] Object of class LoginForm could not be converted to string (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php:1523)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php(514): inputField()
+#1 /srv/vhosts/itquotes/protected/views/profile/_form.php(5): textField()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#5 /srv/vhosts/itquotes/protected/views/profile/login.php(5): ProfileController->renderPartial()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): ProfileController->renderPartial()
+#10 /srv/vhosts/itquotes/protected/controllers/profile/LoginAction.php(20): ProfileController->render()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): LoginAction->run()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): ProfileController->runAction()
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#15 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#16 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#17 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile
+2009/09/02 12:43:56 [error] [php] Object of class LoginForm could not be converted to string (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php:1523)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php(543): inputField()
+#1 /srv/vhosts/itquotes/protected/views/profile/_form.php(9): passwordField()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#5 /srv/vhosts/itquotes/protected/views/profile/login.php(5): ProfileController->renderPartial()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): ProfileController->renderInternal()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): ProfileController->renderPartial()
+#10 /srv/vhosts/itquotes/protected/controllers/profile/LoginAction.php(20): ProfileController->render()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): LoginAction->run()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): ProfileController->runAction()
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#15 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#16 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#17 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile
+2009/09/02 12:49:26 [error] [exception.CException] exception 'CException' with message 'CWebUser does not have a method named "isGuest".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:218
+Stack trace:
+#0 [internal function]: CComponent->__call('isGuest', Array)
+#1 /srv/vhosts/itquotes/protected/views/profile/login.php(3): CWebUser->isGuest()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('login', Array, true)
+#6 /srv/vhosts/itquotes/protected/controllers/profile/LoginAction.php(20): CController->render('login', Array)
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): LoginAction->run()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(LoginAction))
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(LoginAction), Array)
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('')
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile')
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#13 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#14 {main} REQUEST_URI=/index.php?r=profile
+2009/09/02 12:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('list')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/list')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/list
+2009/09/02 12:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('list')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/list')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/list
+2009/09/02 15:00:43 [error] [exception.CException] exception 'CException' with message 'LoginAction does not have a method named "redirect".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:218
+Stack trace:
+#0 [internal function]: CComponent->__call('redirect', Array)
+#1 /srv/vhosts/itquotes/protected/controllers/profile/LoginAction.php(13): LoginAction->redirect('/index.php')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): LoginAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(LoginAction))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(LoginAction), Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('')
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile')
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#8 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#9 {main} REQUEST_URI=/index.php?r=profile
+2009/09/02 15:02:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 15:17:38 [error] [exception.CException] exception 'CException' with message 'Filter "filterAccessControl" is invalid. Controller "ProfileController" does have the filter method "filterfilterAccessControl".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php:47
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(72): CInlineFilter::create(Object(ProfileController), 'filterAccessCon...')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain::create(Object(ProfileController), Object(LoginAction), Array)
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(LoginAction), Array)
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('login')
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/login')
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#7 {main} REQUEST_URI=/index.php?r=profile/login
+2009/09/02 15:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 15:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 15:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 15:23:01 [error] [php] Missing argument 1 for CController::redirect(), called in /srv/vhosts/itquotes/protected/controllers/ProfileController.php on line 49 and defined (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:829)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/login
+2009/09/02 15:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 15:29:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tag".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('tag')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('tag')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/tag')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/tag&0=list
+2009/09/02 15:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tag".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('tag')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('tag')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/tag')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/tag&0=list
+2009/09/02 15:29:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tag".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('tag')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('tag')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/tag')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/tag&0=list
+2009/09/02 15:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tag".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('tag')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('tag')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/tag')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=profile/tag&0=list
+2009/09/02 15:41:23 [error] [php] include(LogoutAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): ProfileController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): ProfileController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/logout
+2009/09/02 15:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 16:06:10 [error] [php] Missing argument 1 for CController::redirect(), called in /srv/vhosts/itquotes/protected/controllers/profile/LogoutAction.php on line 7 and defined (/home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:829)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(129): ProfileController->runAction()
+#1 /srv/vhosts/itquotes/protected/controllers/ProfileController.php(52): CFilterChain->run()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#9 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/logout
+2009/09/02 16:06:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php
+2009/09/02 16:28:43 [error] [php] require(/srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:246)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): ProfileController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): ProfileController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:29:05 [error] [php] require(/srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:246)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): ProfileController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): ProfileController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:29:07 [error] [php] require(/srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:246)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): ProfileController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): ProfileController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:29:55 [error] [exception.CException] exception 'CException' with message 'ProfileController cannot find the requested view "_changePasswordForm".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:710
+Stack trace:
+#0 /srv/vhosts/itquotes/protected/views/profile/changePassword.php(5): CController->renderPartial('_changePassword...', Array)
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('changePassword', Array, true)
+#5 /srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php(7): CController->render('changePassword', Array)
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ChangePasswordAction->run()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(129): CController->runAction(Object(ChangePasswordAction))
+#8 /srv/vhosts/itquotes/protected/controllers/ProfileController.php(52): CFilterChain->run()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl(Object(CFilterChain))
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ChangePasswordAction), Array)
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('change_password')
+#14 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/change_...')
+#15 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#16 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#17 {main} REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:30:22 [error] [exception.CException] exception 'CException' with message 'CWebUser does not have a method named "getErrors".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:218
+Stack trace:
+#0 [internal function]: CComponent->__call('getErrors', Array)
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/helpers/CHtml.php(1407): CWebUser->getErrors()
+#2 /srv/vhosts/itquotes/protected/views/profile/_changePasswordForm.php(2): CHtml::errorSummary(Object(CWebUser))
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#6 /srv/vhosts/itquotes/protected/views/profile/changePassword.php(5): CController->renderPartial('_changePassword...', Array)
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): CController->renderPartial('changePassword', Array, true)
+#11 /srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php(7): CController->render('changePassword', Array)
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ChangePasswordAction->run()
+#13 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(129): CController->runAction(Object(ChangePasswordAction))
+#14 /srv/vhosts/itquotes/protected/controllers/ProfileController.php(52): CFilterChain->run()
+#15 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl(Object(CFilterChain))
+#16 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#18 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ChangePasswordAction), Array)
+#19 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('change_password')
+#20 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/change_...')
+#21 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#22 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#23 {main} REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:32:11 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CComponent.php:120
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/auth/CWebUser.php(97): CComponent->__get('username')
+#1 /srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php(6): CWebUser->__get('username')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ChangePasswordAction->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(129): CController->runAction(Object(ChangePasswordAction))
+#4 /srv/vhosts/itquotes/protected/controllers/ProfileController.php(52): CFilterChain->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl(Object(CFilterChain))
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ChangePasswordAction), Array)
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('change_password')
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/change_...')
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#12 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#13 {main} REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:36:09 [error] [exception.CException] exception 'CException' with message 'Some text...' in /srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php:9
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ChangePasswordAction->run()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(129): CController->runAction(Object(ChangePasswordAction))
+#2 /srv/vhosts/itquotes/protected/controllers/ProfileController.php(52): CFilterChain->run()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl(Object(CFilterChain))
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ChangePasswordAction), Array)
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('change_password')
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('profile/change_...')
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#10 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#11 {main} REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 16:58:59 [error] [php] Undefined variable: user (/srv/vhosts/itquotes/protected/views/profile/changePassword.php:4)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): ProfileController->renderFile()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): ProfileController->renderPartial()
+#2 /srv/vhosts/itquotes/protected/controllers/profile/ChangePasswordAction.php(8): ProfileController->render()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ChangePasswordAction->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(129): ProfileController->runAction()
+#5 /srv/vhosts/itquotes/protected/controllers/ProfileController.php(52): CFilterChain->run()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CInlineFilter.php(59): ProfileController->filterAccessControl()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/filters/CFilterChain.php(126): CInlineFilter->filter()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(283): CFilterChain->run()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): ProfileController->runActionWithFilters()
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): ProfileController->run()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#12 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#13 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=profile/change_password
+2009/09/02 17:52:59 [error] [exception.CException] exception 'CException' with message 'TagController cannot find the requested view "/admin/foo".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:710
+Stack trace:
+#0 /srv/vhosts/itquotes/protected/views/layouts/main.php(15): CController->renderPartial('/admin/foo')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require('/srv/vhosts/itq...')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): CBaseController->renderInternal('/srv/vhosts/itq...', Array, true)
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(642): CBaseController->renderFile('/srv/vhosts/itq...', Array, true)
+#4 /srv/vhosts/itquotes/protected/controllers/tag/ListAction.php(11): CController->render('list', Array)
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(ListAction))
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(ListAction), Array)
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('list')
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/list')
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#11 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#12 {main} REQUEST_URI=/index.php?r=tag/list
+2009/09/02 18:00:25 [error] [php] Undefined variable: menu_user (/srv/vhosts/itquotes/protected/views/admin/menu.php:1)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): TagController->renderFile()
+#1 /srv/vhosts/itquotes/protected/views/layouts/main.php(15): TagController->renderPartial()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): TagController->renderInternal()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(642): TagController->renderFile()
+#5 /srv/vhosts/itquotes/protected/controllers/tag/ListAction.php(11): TagController->render()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): TagController->runAction()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): TagController->runActionWithFilters()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): TagController->run()
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#12 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php?r=tag/list
+2009/09/03 10:49:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=tag/list
+2009/09/03 11:18:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('profile')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('profile')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('tag/profile/0/c...')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php/tag/profile/0/change_password
+2009/09/03 11:24:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php:336
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#2 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=profile/login
+2009/09/03 11:47:57 [error] [php] Undefined variable: qutoe (/srv/vhosts/itquotes/protected/views/quote/list.php:20)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): QuoteController->renderFile()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): QuoteController->renderPartial()
+#2 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(11): QuoteController->render()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): QuoteController->runAction()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#9 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php/quote/list
+2009/09/03 11:48:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php/quote/add
+2009/09/03 11:48:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Quote not found' in /srv/vhosts/itquotes/protected/controllers/quote/EditAction.php:9
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): EditAction->run()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): CController->runAction(Object(EditAction))
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): CController->runActionWithFilters(Object(EditAction), Array)
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('edit')
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/edit/id/2')
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#7 {main} REQUEST_URI=/index.php/quote/edit/id/2
+2009/09/03 12:03:16 [error] [php] include(Html.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /srv/vhosts/itquotes/protected/views/quote/list.php(19): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(119): require()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CBaseController.php(88): QuoteController->renderInternal()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(701): QuoteController->renderFile()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(640): QuoteController->renderPartial()
+#5 /srv/vhosts/itquotes/protected/controllers/quote/ListAction.php(11): QuoteController->render()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(300): ListAction->run()
+#7 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(278): QuoteController->runAction()
+#8 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(257): QuoteController->runActionWithFilters()
+#9 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#10 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#11 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#12 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php/quote/list
+2009/09/03 12:05:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php:439
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(262): CController->missingAction('add')
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): CController->run('add')
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController('quote/add')
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#4 /srv/vhosts/itquotes/index.php(10): CApplication->run()
+#5 {main} REQUEST_URI=/index.php/quote/add
+2009/09/03 12:11:20 [error] [php] require(/srv/vhosts/itquotes/protected/controllers/quote/AddAction.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:246)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#6 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php/quote/add
+2009/09/03 12:14:03 [error] [php] include(AddAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php/quote/add
+2009/09/03 12:14:30 [error] [php] include(DeleteAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php/quote/delete/3
+2009/09/03 12:18:13 [error] [php] include(DeleteAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php:324)
+Stack trace:
+#0 /home/viacheslav/bin/yii-1.0.8.r1317/framework/YiiBase.php(175): spl_autoload_call()
+#1 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(396): createComponent()
+#2 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(376): QuoteController->createActionFromMap()
+#3 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CController.php(251): QuoteController->createAction()
+#4 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(332): QuoteController->run()
+#5 /home/viacheslav/bin/yii-1.0.8.r1317/framework/web/CWebApplication.php(120): CWebApplication->runController()
+#6 /home/viacheslav/bin/yii-1.0.8.r1317/framework/base/CApplication.php(134): CWebApplication->processRequest()
+#7 /srv/vhosts/itquotes/index.php(10): CWebApplication->run()
+REQUEST_URI=/index.php/quote/delete/3
