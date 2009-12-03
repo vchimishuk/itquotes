@@ -1,0 +1,25 @@
+TODO
+- Make URLs for site controller more short and pretty.
+- When list table is too long footer move over it.
+- Show/hide search form link's style is wrong
+- Use Yii::app()->createAbsoluteUrl everywhere
+- quote/edit. approved time.
+- quotes/edit. all tags in one line
+- Remove index.php URI segment.
+- Make favicon.
+- Add pagination to all site controller's pages.
+
+FRONTEND
+- Tags cloud
+- Pages:
+	* All quotes list. Sort order -- newest the first.
+	* All quotes for some tag. Sort order -- newest the first.
+	* Search. Search by author, text.
+	* About page.
+	* Add quote.
+	* RSS (DONE)
+	
+SOME IDEAS FOR FUTURE
+- Make authors table, in this case we can sort quotes by authors.
+- Cache tags, for example.
+- Database keys.
