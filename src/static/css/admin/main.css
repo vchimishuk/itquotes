@@ -383,3 +383,8 @@ a.button {
 div.hidden {
 	display: none;
 }
+
+a.home_link {
+    text-decoration: none;
+    color: white;
+}

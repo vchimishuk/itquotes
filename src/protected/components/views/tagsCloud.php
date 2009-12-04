@@ -1,5 +1,3 @@
-Tags cloud: <br />
-
 <? foreach($tags as $tag): ?>
-	<?=$tag->name?> (<?=$tag->quotesCount?>),
+<?=CHtml::link("{$tag->name} ({$tag->quotesCount})", array("site/tag/" . CHtml::encode($tag->name)))?>,<br />
 <? endforeach; ?>

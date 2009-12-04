@@ -8,9 +8,4 @@ class AdminMenu extends CWidget
 			'action' => $this->controller->action->id,
 		));
 	}
-
-	protected function isActive($pattern, $controllerID, $actionID)
-	{
-		return true;
-	}
 }

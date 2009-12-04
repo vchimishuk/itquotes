@@ -18,7 +18,7 @@
 				Logged in as <?=Yii::app()->user->name?>,
 				<?=CHtml::link('Logout?', array('profile/logout'))?>
 			</div>
-			<h1><?=Yii::app()->name?></h1>
+			<h1><a href="/" class="home_link"><?=Yii::app()->name?></a></h1>
 			<p>Administration panel</p>
 			<div class="clear"></div>
 		</div>

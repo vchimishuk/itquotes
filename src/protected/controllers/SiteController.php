@@ -21,6 +21,7 @@ class SiteController extends CController
 		return array(
 			'list' => 'application.controllers.site.ListAction',
 			'quote' => 'application.controllers.site.QuoteAction',
+			'random' => 'application.controllers.site.RandomAction',
 			'tag' => 'application.controllers.site.TagAction',
 			'add' => 'application.controllers.site.AddAction',
 			'rss' => 'application.controllers.site.RssAction',

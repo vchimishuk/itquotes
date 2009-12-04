@@ -4,7 +4,7 @@ class TagsCloud extends CWidget
 	public function run()
 	{
 		$criteria = new CDbCriteria();
-		$criteria->order = 'nameEn';
+		$criteria->order = 'name';
 		$tags = Tag::model()->with('quotesCount')->findAll($criteria);
 
 		// Delete tags with empty quotesCount (With PHP > 5.3 e can use closure here).
@@ -33,7 +33,7 @@ class TagsCloud extends CWidget
 		usort($tags, 'tagsSort');
 			
 		$this->render('tagsCloud', array(
-			'tags' => $tags,
-		));
+				      'tags' => $tags,
+			      ));
 	}
 }

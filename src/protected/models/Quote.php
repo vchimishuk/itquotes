@@ -8,6 +8,7 @@ class Quote extends CActiveRecord
 	 * @var string $textRu
 	 * @var string $textEn
 	 * @var string $author
+	 * @var string $notes
 	 */
 	 
 	/**
@@ -33,7 +34,7 @@ class Quote extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('author','length','max'=>255),
+			array('author, notes','length','max'=>255),
 		);
 	}
 
@@ -59,6 +60,7 @@ class Quote extends CActiveRecord
 			'textRu' => 'Text Ru',
 			'textEn' => 'Text En',
 			'author' => 'Author',
+			'notes' => 'Notes',
 			'createdTime' => 'Added',
 			'approvedTime' => 'Approved',
 		);
@@ -70,7 +72,7 @@ class Quote extends CActiveRecord
 	 */	
 	public function safeAttributes()
 	{
-		return array('textRu', 'textEn', 'author');
+		return array('textRu', 'textEn', 'author', 'notes');
 	}
 	
 	/**

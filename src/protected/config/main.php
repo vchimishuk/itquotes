@@ -53,6 +53,7 @@ return array(
 				'quote/edit/<id:\d+>' => 'quote/edit',
 				'quote/delete/<id:\d+>' => 'quote/delete',
 				// Site
+				//'site/list' => 'site/list',
 				'site/quote/<id:\d+>' => 'site/quote',
 				'site/tag/<tag:\w+>' => 'site/tag',
 			),

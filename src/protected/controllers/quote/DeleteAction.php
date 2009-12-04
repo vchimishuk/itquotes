@@ -12,6 +12,5 @@ class DeleteAction extends CAction
 		$quote->delete();
 		Yii::app()->user->setFlash('generalMessage', 'Quote was deleted successfully.');
 		$this->controller->redirect(array('list'));
-		// TODO: Delete quote and tags relations.
 	}
 }
