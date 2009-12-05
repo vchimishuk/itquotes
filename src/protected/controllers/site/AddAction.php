@@ -12,11 +12,10 @@ class AddAction extends CAction
 				$quote->textEn = $form->textEn;
 				$quote->textRu = $form->textRu;
 				$quote->author = $form->author;
+				$quote->notes = $form->notes;
 				
 				if($quote->save()) {
-					// TODO: Redirect to thanks page.
-					echo "Quote was added successfully."; 
-					return;
+					$this->controller->redirect(array('addThanks'));
 				}
 			}
 		}

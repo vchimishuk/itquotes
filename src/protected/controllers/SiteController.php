@@ -24,6 +24,7 @@ class SiteController extends CController
 			'random' => 'application.controllers.site.RandomAction',
 			'tag' => 'application.controllers.site.TagAction',
 			'add' => 'application.controllers.site.AddAction',
+			'addThanks' => 'application.controllers.site.AddThanksAction',
 			'rss' => 'application.controllers.site.RssAction',
 			'captcha' => array('class'=>'CCaptchaAction'),
 		);

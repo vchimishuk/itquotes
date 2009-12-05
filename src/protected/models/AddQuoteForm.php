@@ -4,6 +4,7 @@ class AddQuoteForm extends CFormModel
 	public $textEn;
 	public $textRu;
 	public $author;
+	public $notes;
 	public $verifyCode;
 
 	/**
@@ -24,7 +25,7 @@ class AddQuoteForm extends CFormModel
 	
 	public function safeAttributes()
 	{
-		return array('textRu', 'textEn', 'author', 'verifyCode');
+		return array('textRu', 'textEn', 'author', 'notes', 'verifyCode');
 	}
 
 	/**
@@ -35,6 +36,8 @@ class AddQuoteForm extends CFormModel
 		return array(
 			'textRu' => 'Text (RU)',
 			'textEn' => 'Text (EN)',
+			'author' => 'Author',
+			'notes' => 'Notes',
 			'verifyCode' => '',
 		);
 	}
@@ -44,30 +47,4 @@ class AddQuoteForm extends CFormModel
 		if(empty($this->textEn) && empty($this->textRu))
 			$this->addError('textEn', 'You must fill at least one text field');
 	}
-
-	/**
-	 * Authenticates the password.
-	 * This is the 'authenticate' validator as declared in rules().
-	 */
-//	public function authenticate($attribute, $params)
-//	{
-//		// We only want to authenticate when no input errors.
-//		if(!$this->hasErrors()) { 
-//			$identity = new UserIdentity($this->username, $this->password);
-//			
-//			$identity->authenticate();
-//			
-//			switch($identity->errorCode) {
-//				case UserIdentity::ERROR_NONE:
-//					$duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
-//					Yii::app()->user->login($identity, $duration);
-//					break;
-//					
-//				case UserIdentity::ERROR_USERNAME_INVALID:
-//				case UserIdentity::ERROR_PASSWORD_INVALID:
-//					$this->addError('password', 'Password is incorrect.');
-//					break;
-//			}
-//		}
-//	}
 }
