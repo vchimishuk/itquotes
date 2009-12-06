@@ -6,8 +6,6 @@ TODO
 - When list table is too long footer move over it.
 - Show/hide search form link's style is wrong
 - quotes/edit. all tags in one line
-- Add pagination to all site controller's pages.
-- Pretty URLs.
 - Remove last coma at all tag lists. (join?)
 - i18n
 
