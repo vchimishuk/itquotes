@@ -21,6 +21,6 @@ class RandomAction extends CAction
 
 		$quote = Quote::model()->find($criteria);
 
-		$this->controller->render('quote', array('quote' => $quote));		
+		$this->controller->render('random', array('quote' => $quote));		
 	}
 }

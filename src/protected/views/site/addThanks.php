@@ -1,3 +1,5 @@
-Thanks for adding quote. <br />
-If you want to add a new quote please click <a href="<?=$this->createAbsoluteUrl('add')?>">here</a>,
-or click <a href="<?=$this->createAbsoluteUrl('/')?>">here</a> to go to the start page.
+Цитата была добавлена и будет отобрадена на сайте после модерации.<br />
+Спасибо Вам, за развитие ресурса.<br />
+<br />
+
+Если Вы хотите добавить еще цитату Вы можете вернутся на <?=CHtml::link('страницу добавления цитат', array('add'))?>, или вернутся на <?=CHtml::link('главную страницу', array('/'))?>, в противном случае.

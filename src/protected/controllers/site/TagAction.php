@@ -3,17 +3,42 @@ class TagAction extends CAction
 {
 	public function run()
 	{
-		//throw new CHttpException(404, 'How can I select all approved tag quotes?');
+		$tagName = $_GET['tag'];
+		$config = new CConfiguration(Yii::app()->basePath . '/config/pager.php');
 		
-		//$tag = Tag::model()->find($criteria);
-		$tag = Tag::model()->with('quotes')->findByAttributes(array(
-			'name' => $_GET['tag'],
-		));
+		$criteria = new CDbCriteria();
+		$criteria->condition = 'name = :name';
+		$criteria->params = array(':name' => $tagName);
+
+		/*
+		 * Find total count of this tag quotes.
+		 */
+		$connection = Yii::app()->db;
+		$command = $connection->createCommand("SELECT COUNT(*) AS totalCount FROM QuoteTag WHERE tagId = (
+                                                           SELECT id FROM Tag WHERE `name` = '{$tagName}' LIMIT 1
+                                                       )");
+		$reader = $command->query();
+		$row = $reader->read();
+		$quotesCount = $row['totalCount'];
+
+		$pages = new CPagination($quotesCount);
+		$config->applyTo($pages);
+		//$pages->applyLimit($criteria);
+
+		$tag = Tag::model()->with(array('quotes' => array(
+							'condition' => 'approvedTime',
+							'order' => 'approvedTime DESC',
+							'offset' => 0,
+							'limit' => 1,
+						)))->find($criteria);
+		
 		if($tag === null)
 			throw new CHttpException(404, 'Tag not found');
 
-		echo $tag->name;
-			
-		//$this->controller->render('tag', array('tag' => $tag));		
+		$this->controller->render('tag', array(
+						  'tag' => $tag,
+						  'quotes' => $tag->quotes,
+						  'pages' => $pages,
+					  ));
 	}
 }

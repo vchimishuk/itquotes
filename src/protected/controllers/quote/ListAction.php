@@ -14,7 +14,6 @@ class ListAction extends CAction
 		if(!empty($_POST['search']) && is_array($_POST['search'])) {
 			$search = $_POST['search'];
 			$session['search'] = $search;
-			$resetCurrentPage = true;
 		} else {
 			if(!empty($session['search']))
 				$search = $session['search'];
@@ -41,8 +40,6 @@ class ListAction extends CAction
 		$criteria->order = 'id DESC';
 
 		$pages = new CPagination(Quote::model()->count($criteria));
-		if(isset($resetCurrentPage))
-			$pages->currentPage = 0;
 		$config->applyTo($pages);
 		$pages->applyLimit($criteria);
 

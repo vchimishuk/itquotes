@@ -20,11 +20,13 @@ class SiteController extends CController
 	{
 		return array(
 			'list' => 'application.controllers.site.ListAction',
+			'search' => 'application.controllers.site.SearchAction',
 			'quote' => 'application.controllers.site.QuoteAction',
 			'random' => 'application.controllers.site.RandomAction',
 			'tag' => 'application.controllers.site.TagAction',
 			'add' => 'application.controllers.site.AddAction',
 			'addThanks' => 'application.controllers.site.AddThanksAction',
+			'about' => 'application.controllers.site.AboutAction',
 			'rss' => 'application.controllers.site.RssAction',
 			'captcha' => array('class'=>'CCaptchaAction'),
 		);

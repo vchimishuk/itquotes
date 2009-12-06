@@ -41,7 +41,8 @@ return array(
 			'username'=>'root',
 			'password'=>'system',
 			'enableParamLogging'=>'true',
-			'charset'=>'utf8'
+			'charset'=>'utf8',
+			//'enableProfiling' => true,
 		),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
@@ -53,9 +54,14 @@ return array(
 				'quote/edit/<id:\d+>' => 'quote/edit',
 				'quote/delete/<id:\d+>' => 'quote/delete',
 				// Site
-				//'site/list' => 'site/list',
-				'site/quote/<id:\d+>' => 'site/quote',
-				'site/tag/<tag:\w+>' => 'site/tag',
+				'list' => 'site/list',
+				'quote/<id:\d+>' => 'site/quote',
+				'random' => 'site/random',
+				'search' => 'site/search',
+				'add' => 'site/add',
+				'about' => 'site/about',
+				'rss' => 'site/rss',
+				//'tag/<tag:\w+>' => 'site/tag',
 			),
 		),
 		'session' => array(

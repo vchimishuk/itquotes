@@ -1,33 +1,25 @@
+BUGS
+- Cyrilic tag name break url (site/tag/tagName).
+- site/tag pagination links is broken.
+
+
 TODO
-- Make URLs for site controller more short and pretty.
+- Make site/tag page.
 - When list table is too long footer move over it.
-- Show/hide search form link's style is wrong
-- Use Yii::app()->createAbsoluteUrl everywhere
-- quotes/edit. all tags in one line
 - Remove index.php URI segment.
-- Make favicon.
+- Show/hide search form link's style is wrong
+- quotes/edit. all tags in one line
 - Add pagination to all site controller's pages.
 - Pretty URLs.
-- i18n
 - Remove last coma at all tag lists. (join?)
+- i18n
 
 
 REFACTORING
 
 
-
-FRONTEND
-- Tags cloud
-- Pages:
-!	* All quotes for some tag. Sort order -- newest the first.
-	* Search. Search by author, text.
-	* About page.
-	* Add quote.
-
-	
 SOME IDEAS FOR FUTURE
 - Make authors table, in this case we can sort quotes by authors.
 - Cache tags, for example.
 - Database keys.
-
-
+- Add pagination for Rss feed.

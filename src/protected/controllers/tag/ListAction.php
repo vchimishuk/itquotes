@@ -7,14 +7,13 @@ class ListAction extends CAction
 		$session = Yii::app()->session;
 		$cookies = Yii::app()->request->cookies;
 		
-		// If referrer is not our controller delete search parameters from session.
+		// If referrer is not our action delete search parameters from session.
 		if(strpos(Yii::app()->request->urlReferrer, '/tag/list') === false)
 			unset($session['search']);
 		
 		if(!empty($_POST['search']) && is_array($_POST['search'])) {
 			$search = $_POST['search'];
 			$session['search'] = $search;
-			$resetCurrentPage = true;
 		} else {
 			if(!empty($session['search']))
 				$search = $session['search'];
@@ -30,8 +29,6 @@ class ListAction extends CAction
 		$criteria->order = 'name';
 		
 		$pages = new CPagination(Tag::model()->count($criteria));
-		if(isset($resetCurrentPage))
-			$pages->currentPage = 0;
 		$config->applyTo($pages);
 		$pages->applyLimit($criteria);
 

@@ -1,5 +1,5 @@
 <h1>Tags list</h1>
-<?=CHtml::beginForm()?>
+<?=CHtml::beginForm($this->createUrl('list'))?>
 
 <?=$this->renderPartial('/admin/successSummary')?>
 
