@@ -6,7 +6,6 @@ BUGS
 TODO
 - Make site/tag page.
 - When list table is too long footer move over it.
-- Remove index.php URI segment.
 - Show/hide search form link's style is wrong
 - quotes/edit. all tags in one line
 - Add pagination to all site controller's pages.

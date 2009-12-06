@@ -46,6 +46,7 @@ return array(
 		),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName' => false,
 			'rules'=>array(
 				// Tag
 				'tag/edit/<id:\d+>' => 'tag/edit',
