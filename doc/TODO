@@ -1,10 +1,8 @@
 BUGS
 - Cyrilic tag name break url (site/tag/tagName).
-- site/tag pagination links is broken.
 
 
 TODO
-- Make site/tag page.
 - When list table is too long footer move over it.
 - Show/hide search form link's style is wrong
 - quotes/edit. all tags in one line

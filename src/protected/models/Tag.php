@@ -43,6 +43,7 @@ class Tag extends CActiveRecord
 	{
 		return array(
 			'quotesCount' => array(self::STAT, 'Quote', 'QuoteTag(tagId, quoteId)'),
+			'approvedQuotesCount' => array(self::STAT, 'Quote', 'QuoteTag(tagId, quoteId)', 'condition' => 'approvedTime'),
 			'quotes' => array(self::MANY_MANY, 'Quote', 'QuoteTag(tagId, quoteId)'),
 		);
 	}

@@ -49,7 +49,10 @@ return array(
 			'showScriptName' => false,
 			'rules'=>array(
 				// Tag
+				'tag' => 'tag/list',
+				'tag/list' => 'tag/list',
 				'tag/edit/<id:\d+>' => 'tag/edit',
+				'tag/add' => 'tag/add',
 				'tag/delete/<id:\d+>' => 'tag/delete',
 				// Quote
 				'quote/edit/<id:\d+>' => 'quote/edit',
@@ -62,7 +65,7 @@ return array(
 				'add' => 'site/add',
 				'about' => 'site/about',
 				'rss' => 'site/rss',
-				//'tag/<tag:\w+>' => 'site/tag',
+				'tag/<tag:\w+>' => 'site/tag',
 			),
 		),
 		'session' => array(
