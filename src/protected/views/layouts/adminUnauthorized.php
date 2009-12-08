@@ -9,8 +9,8 @@
 <body>
 	<div class="header">
 		<div class="h_top">
-			<h1><?=Yii::app()->name?></h1>
-			<p>Administration panel</p>
+			<h1><?=CHtml::link(Yii::app()->name, '/', array('class' => 'home_link'))?></h1>
+			<!-- <p>Administration panel</p> -->
 		</div>
 	</div>
 

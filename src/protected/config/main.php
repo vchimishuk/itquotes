@@ -48,16 +48,16 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName' => false,
 			'rules'=>array(
-				// Tag
+				// Tag controller
 				'tag' => 'tag/list',
 				'tag/list' => 'tag/list',
 				'tag/edit/<id:\d+>' => 'tag/edit',
 				'tag/add' => 'tag/add',
 				'tag/delete/<id:\d+>' => 'tag/delete',
-				// Quote
+				// Quote controller.
 				'quote/edit/<id:\d+>' => 'quote/edit',
 				'quote/delete/<id:\d+>' => 'quote/delete',
-				// Site
+				// Site controller.
 				'list' => 'site/list',
 				'quote/<id:\d+>' => 'site/quote',
 				'random' => 'site/random',

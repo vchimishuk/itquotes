@@ -16,7 +16,7 @@
 			<? foreach($statistics['popularTags'] as $tag): ?>
 				<?=CHtml::link("{$tag->name} ({$tag->quotesCount})",
 					array('edit', 'id' => $tag->id)
-				)?>,
+				)?>
 			<? endforeach; ?>
 		</li>
 	</ul>
