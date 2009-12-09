@@ -1,5 +1,5 @@
 <? foreach($tags as $tag): ?>
 <?=CHtml::link($tag->name, array("site/tag", 'tag' => CHtml::encode($tag->name)), array(
-  'style' => 'font-size: 100%;',
+'style' => 'font-size: ' . (100 + $tagWeights[$tag->id]) . '%;',
 ))?>&nbsp;
 <? endforeach; ?>

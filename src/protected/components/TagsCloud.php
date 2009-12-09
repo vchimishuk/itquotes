@@ -31,9 +31,40 @@ class TagsCloud extends CWidget
 			return ($a->quotesCount > $b->quotesCount) ? -1 : 1;
 		}
 		usort($tags, 'tagsSort');*/
+
+
+		/*
+		 * Calculate tags weights.
+		 *
+		 * Algorythm from http://en.wikipedia.org/wiki/Tag_cloud
+		 */
+		function tagsLimits($acc, $tag)
+		{
+			if($tag->approvedQuotesCount > $acc['max'])
+				$acc['max'] = $tag->approvedQuotesCount;
+
+			if(!$acc['min'] || $acc['min'] > $tag->approvedQuotesCount)
+				$acc['min'] = $tag->approvedQuotesCount;
+
+			return $acc;
+		}
+		
+		$tagWeights = array();
+		$limits = array_reduce($tags, 'tagsLimits', array('min' => 0, 'max' => 0));
+		$fontSizeMin = 100; // %
+		$fontSizeMax = 200;
+
+		foreach($tags as $tag) {
+			if($tag->approvedQuotesCount > $limits['min'])
+				$tagWeights[$tag->id] = ($fontSizeMax * ($tag->approvedQuotesCount - $limits['min'])) / $limits['max'] - $limits['min'];
+			else
+				$tagWeights[$tag->id] = 1;
+		}
+
 			
 		$this->render('tagsCloud', array(
 				      'tags' => $tags,
+				      'tagWeights' => $tagWeights,
 			      ));
 	}
 }
