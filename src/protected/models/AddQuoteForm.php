@@ -34,10 +34,10 @@ class AddQuoteForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'textRu' => 'Text (RU)',
-			'textEn' => 'Text (EN)',
-			'author' => 'Author',
-			'notes' => 'Notes',
+			'textRu' => 'Текст (рус.)',
+			'textEn' => 'Текст (англ.)',
+			'author' => 'Автор',
+			'notes' => 'Комментарий',
 			'verifyCode' => '',
 		);
 	}
@@ -45,6 +45,6 @@ class AddQuoteForm extends CFormModel
 	public function validateText($attribute, $params)
 	{
 		if(empty($this->textEn) && empty($this->textRu))
-			$this->addError('textEn', 'You must fill at least one text field');
+			$this->addError('textEn', 'Хотя бы одно текстовое поле должно быть заполненно');
 	}
 }

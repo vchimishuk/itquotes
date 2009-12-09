@@ -1,22 +1,32 @@
-<h3>Search quote</h3>
-
+<div class="content">
 <?=CHtml::beginForm($this->createUrl('search'))?>
-	<?=CHtml::activeLabelEx($form, 'text')?><br />
-	<?=CHtml::activeTextField($form, 'text', array(
-		'maxlength' => 255,
-	))?>
-        <br /><br />
-
-	<?=CHtml::activeLabelEx($form, 'author')?><br />
-	<?=CHtml::activeTextField($form, 'author', array(
-		'maxlength' => 255,
-	))?>
-        <br /><br />
-	
-	<?=CHtml::submitButton('Search', array())?>
+<table>
+  <tr>
+    <td><?=CHtml::activeLabelEx($form, 'text')?>:</td>
+    <td>
+      <?=CHtml::activeTextField($form, 'text', array(
+				       'maxlength' => 255,
+      ))?>
+    </td>
+  <tr>
+    <td><?=CHtml::activeLabelEx($form, 'author')?>:</td>
+    <td>
+      <?=CHtml::activeTextField($form, 'author', array(
+				       'maxlength' => 255,
+      ))?>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <?=CHtml::submitButton('Искать', array())?>
+    </td>
+  </tr>
+</table>
 <?=CHtml::endForm()?>
+<br />
 
 <?=$this->renderPartial('_list', array(
   'quotes' => $quotes,
   'pages' => $pages,
 ))?>
+</div>

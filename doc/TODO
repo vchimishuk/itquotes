@@ -3,10 +3,12 @@ BUGS
 
 
 TODO
+- Increase tag size with its weight.
 - When list table is too long footer move over it.
 - Show/hide search form link's style is wrong
 - quotes/edit. all tags in one line
 - i18n
+- send email with quote adding notification
 
 
 REFACTORING
@@ -14,6 +16,5 @@ REFACTORING
 
 SOME IDEAS FOR FUTURE
 - Make authors table, in this case we can sort quotes by authors.
-- Cache tags, for example.
-- Database keys.
+- Cache tags cloud
 - Add pagination for Rss feed.

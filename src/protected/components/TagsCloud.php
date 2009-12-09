@@ -23,14 +23,14 @@ class TagsCloud extends CWidget
 		$tags = array_filter($tags, 'tagsFilter');
 		
 		// Sort tags by their weights (quotesCount).
-		function tagsSort($a, $b)
+		/*function tagsSort($a, $b)
 		{
 			if($a->quotesCount == $b->quotesCount)
 				return 0;
 
 			return ($a->quotesCount > $b->quotesCount) ? -1 : 1;
 		}
-		usort($tags, 'tagsSort');
+		usort($tags, 'tagsSort');*/
 			
 		$this->render('tagsCloud', array(
 				      'tags' => $tags,

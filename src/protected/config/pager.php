@@ -1,4 +1,4 @@
 <?php
 return array(
-	'pageSize' => 4,
+	'pageSize' => 15,
 );
