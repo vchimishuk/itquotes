@@ -8,7 +8,12 @@
 		<title>Quote #<?=$quote->id?></title>
 		<link><?=Yii::app()->createAbsoluteUrl('site/quote',array('id' => $quote->id))?></link>
 		<guid><?=Yii::app()->createAbsoluteUrl('site/quote',array('id' => $quote->id))?></guid>
-		<description><?=CHtml::encode(strip_tags(!empty($quote->textEn) ? $quote->textEn : $quote->textRu))?> (<?=$quote->author?>)</description>
+		<description>
+		  <?=CHtml::encode(strip_tags(!empty($quote->textEn) ? $quote->textEn : $quote->textRu))?>
+		  <? if($quote->author): ?>
+		    (<?=$quote->author?>)
+		  <? endif; ?>
+		</description>
 		<pubDate><?=date('r', $quote->approvedTime)?></pubDate>
 	</item>
 <? endforeach; ?>

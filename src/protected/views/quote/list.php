@@ -57,7 +57,7 @@
 			<td class="bottom"><?=$quote->id?></td>
 			<td class="bottom">
 				<?=CHtml::encode($quote->textEn)?>
-				<? if($quote->textRu && $quote->textRu): ?>
+				<? if($quote->textEn && $quote->textRu): ?>
 					<hr />
 				<? endif; ?>
 				<?=CHtml::encode($quote->textRu)?>
