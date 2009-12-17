@@ -34,29 +34,27 @@ class TagsCloud extends CWidget
 
 
 		/*
-		 * Calculate tags weights.
-		 *
-		 * Algorythm from http://en.wikipedia.org/wiki/Tag_cloud
+		 * Calculate tags weights algorythm from http://en.wikipedia.org/wiki/Tag_cloud
 		 */
-		function tagsLimits($acc, $tag)
-		{
-			if($tag->approvedQuotesCount > $acc['max'])
-				$acc['max'] = $tag->approvedQuotesCount;
 
-			if(!$acc['min'] || $acc['min'] > $tag->approvedQuotesCount)
-				$acc['min'] = $tag->approvedQuotesCount;
-
-			return $acc;
-		}
-		
-		$tagWeights = array();
-		$limits = array_reduce($tags, 'tagsLimits', array('min' => 0, 'max' => 0));
-		$fontSizeMin = 100; // %
-		$fontSizeMax = 200;
-
+		// Find minimum and maximum weights.
+		$minWeight = $maxWeight = 0;
 		foreach($tags as $tag) {
-			if($tag->approvedQuotesCount > $limits['min'])
-				$tagWeights[$tag->id] = ($fontSizeMax * ($tag->approvedQuotesCount - $limits['min'])) / $limits['max'] - $limits['min'];
+			if($tag->approvedQuotesCount > $maxWeight)
+				$maxWeight = $tag->approvedQuotesCount;
+
+			if(!$minWeight || $minWeight > $tag->approvedQuotesCount)
+				$minWeight = $tag->approvedQuotesCount;
+		}
+
+
+		$fontSizeMin = 100; // Minimum tag font size (in percents).
+		$fontSizeMax = 200; // Maximum tag font size (in percents).
+
+		$tagWeights = array();
+		foreach($tags as $tag) {
+			if($tag->approvedQuotesCount > $minWeight)
+				$tagWeights[$tag->id] = ($fontSizeMax * ($tag->approvedQuotesCount - $minWeight)) / $maxWeight - $minWeight;
 			else
 				$tagWeights[$tag->id] = 1;
 		}
