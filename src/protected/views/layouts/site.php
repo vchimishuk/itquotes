@@ -65,6 +65,8 @@ Original was modified by Viacheslav Chumushuk <voice@root.ua>
 	&copy; 2009 <a href="<?=$this->createAbsoluteUrl('/')?>">itquotes.org</a><br />
 	Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>
       </p>
+      
+      <? $this->renderPartial('_statistics'); ?>
     </div>
   </div>
 </html>

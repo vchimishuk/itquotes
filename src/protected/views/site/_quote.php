@@ -15,8 +15,7 @@
       <span class="tags-name">
 	<? $len = count($quote->tags); ?>
 	<? for($i = 0; $i < $len; $i++): ?>
-          <a href="<?=$this->createAbsoluteUrl('tag', array('tag' => $quote->tags[$i]->name))?>"><?=CHtml::encode($quote->tags[$i]->name)?></a>
-	  <?=($i < $len - 1 ? ',' : '')?>
+          <a href="<?=$this->createAbsoluteUrl('tag', array('tag' => $quote->tags[$i]->name))?>"><?=CHtml::encode($quote->tags[$i]->name)?></a><?=($i < $len - 1 ? ',' : '')?>
 	<? endfor; ?>
       </span>
     <? endif; ?>
