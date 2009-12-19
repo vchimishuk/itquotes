@@ -6,7 +6,8 @@
 <br />
 <!-- search form start -->
 <?=CHtml::link('Hide/show search form', '#', array(
-	'id' => 'toggleSearchForm',
+         'id' => 'toggleSearchForm',
+	 'class' => 'tools_link',
 ))?>
 <?=Yii::app()->clientScript->registerScriptFile(
 	Yii::app()->request->baseUrl . '/static/js/admin/toggleSearchForm.js',

@@ -10,5 +10,6 @@
 	<h2>Quotes statistics</h2>
 	<ul>
 		<li>Total count: <?=$statistics['totalCount']?></li>
+		<li>Unapproved count: <?=$statistics['unapprovedCount']?></li>
 	</ul>
 </div>

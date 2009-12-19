@@ -30,6 +30,10 @@ class AdminToolbox extends CWidget
 		if($this->controller->id == 'quote') {
 			// Quotes total count.
 			$staistics['totalCount'] = Quote::model()->count();
+			// Get number of unapproved quotes.
+			$criteria = new CDbCriteria();
+			$criteria->condition = 'NOT approvedTime';
+			$staistics['unapprovedCount'] = Quote::model()->count($criteria);
 		} elseif($this->controller->id == 'tag') {
 			$staistics['totalCount'] = Tag::model()->count();
 			

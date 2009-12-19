@@ -3,17 +3,18 @@ BUGS
 
 
 TODO
-- When list table is too long footer move over it.
-- Show/hide search form link's style is wrong
-- quotes/edit. all tags in one line
 - i18n
-- send email with quote adding notification
+* Admin area
+  - When list table is too long footer move over it.
+  - When you edit quote make tags editing field like in LJ. The same for author.
+  - quotes/edit. all tags in one line
+* Frontend
+  - send email with quote adding notification
+  - Pagination for rss feed
 
 
 REFACTORING
 
 
 SOME IDEAS FOR FUTURE
-- Make authors table, in this case we can sort quotes by authors.
-- Cache tags cloud
-- Add pagination for Rss feed.
+- Caching

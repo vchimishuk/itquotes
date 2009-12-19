@@ -87,7 +87,7 @@ body, table, input, fieldset, legend, select, textarea {
 	text-decoration:none;
 }
 
-.h_bottom a:hover{
+.h_bottom a:hover {
 	color:#fff;
 }
 
@@ -360,7 +360,7 @@ a.button {
 	background-color: #cde;
 }
 
-.main_block table a {
+.main_block table a, .tools_link {
 	color:#4f788c;
 }
 
