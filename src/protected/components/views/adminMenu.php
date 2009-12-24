@@ -11,6 +11,11 @@
 			))?>
 		</li>
 		<li>
+			<?=CHtml::link('Authors', array('author/list'), array(
+				'class' => $controller == 'author' ? 'up' : '',
+			))?>
+		</li>
+		<li>
 			<?=CHtml::link('Profile', array('profile/change_password'), array(
 				'class' => $controller == 'profile' ? 'up' : '',
 			))?>

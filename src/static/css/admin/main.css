@@ -118,6 +118,10 @@ body, table, input, fieldset, legend, select, textarea {
 	padding:10px 20px;
 }
 
+.footer a {
+	color:#ffffff;
+}
+
 /*************************************/
 .h_bottom ul {
 	list-style-type:none;
@@ -272,7 +276,7 @@ input.small {
 	width:300px;
 }
 
-input.medium{
+input.medium {
 	width:460px;
 }
 
@@ -293,6 +297,9 @@ textarea.large {
 	height: 100px;
 }
 
+select.small {
+    width: 200px;
+}
 
 .button  {
 	color:#fff;

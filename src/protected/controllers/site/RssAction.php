@@ -7,11 +7,11 @@ class RssAction extends CAction
 		$config = new CConfiguration(Yii::app()->basePath . '/config/pager.php');
 		
 		$criteria = new CDbCriteria();
-		$criteria->order = 'id DESC';
+		$criteria->order = 'approvedTime DESC';
 		$criteria->condition = 'approvedTime';
 		$criteria->limit = $config['pageSize'];
 		
-		$quotes = Quote::model()->findAll($criteria);
+		$quotes = Quote::model()->with('author')->findAll($criteria);
 
 		$this->controller->render('rss', array(
 			'quotes' => $quotes,

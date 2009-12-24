@@ -11,7 +11,7 @@
 		<description>
 		  <?=CHtml::encode(strip_tags(!empty($quote->textEn) ? $quote->textEn : $quote->textRu))?>
 		  <? if($quote->author): ?>
-		    (<?=$quote->author?>)
+		    (<?=$quote->author->name?>)
 		  <? endif; ?>
 		</description>
 		<pubDate><?=date('r', $quote->approvedTime)?></pubDate>

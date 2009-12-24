@@ -2,5 +2,6 @@
 
 <?=$this->renderPartial('_form', array(
 	'quote' => $quote,
+	'authors' => $authors,
 	'create' => true,
 ))?>

@@ -58,6 +58,9 @@ return array(
 				// Quote controller.
 				'quote/edit/<id:\d+>' => 'quote/edit',
 				'quote/delete/<id:\d+>' => 'quote/delete',
+				// Author controller.
+				'author/edit/<id:\d+>' => 'author/edit',
+				'author/delete/<id:\d+>' => 'author/delete',
 				// Site controller.
 				'list' => 'site/list',
 				'quote/<id:\d+>' => 'site/quote',
@@ -67,6 +70,7 @@ return array(
 				'about' => 'site/about',
 				'rss' => 'site/rss',
 				'tag/<tag:\w+>' => 'site/tag',
+				'author/<authorId:\d+>' => 'site/author',
 			),
 		),
 		'session' => array(

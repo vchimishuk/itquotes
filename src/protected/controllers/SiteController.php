@@ -24,6 +24,7 @@ class SiteController extends CController
 			'quote' => 'application.controllers.site.QuoteAction',
 			'random' => 'application.controllers.site.RandomAction',
 			'tag' => 'application.controllers.site.TagAction',
+			'author' => 'application.controllers.site.AuthorAction',
 			'add' => 'application.controllers.site.AddAction',
 			'addThanks' => 'application.controllers.site.AddThanksAction',
 			'about' => 'application.controllers.site.AboutAction',

@@ -7,7 +7,7 @@ class Quote extends CActiveRecord
 	 * @var integer $id
 	 * @var string $textRu
 	 * @var string $textEn
-	 * @var string $author
+	 * @var integer $author
 	 * @var string $notes
 	 */
 	 
@@ -34,7 +34,7 @@ class Quote extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('author, notes','length','max'=>255),
+			array('notes','length','max'=>255),
 		);
 	}
 
@@ -46,7 +46,8 @@ class Quote extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'tags' => array(self::MANY_MANY, 'Tag', 'QuoteTag(quoteId, tagId)'),
+			'tags' => array(self::MANY_MANY, 'Tag', 'QuoteTag(quoteId, tagId)', 'order' => 'name'),
+			'author' => array(self::BELONGS_TO, 'Author', 'authorId'),
 		);
 	}
 
@@ -60,6 +61,7 @@ class Quote extends CActiveRecord
 			'textRu' => 'Text Ru',
 			'textEn' => 'Text En',
 			'author' => 'Author',
+			'authorId' => 'Author',
 			'notes' => 'Notes',
 			'createdTime' => 'Added',
 			'approvedTime' => 'Approved',
@@ -72,7 +74,7 @@ class Quote extends CActiveRecord
 	 */	
 	public function safeAttributes()
 	{
-		return array('textRu', 'textEn', 'author', 'notes');
+		return array('textRu', 'textEn', 'notes');
 	}
 	
 	/**

@@ -1,3 +1,9 @@
+<? Yii::app()->clientScript->registerScript(
+	'initJQuery',
+	'// We need this hack to force JQuery loading.',
+	CClientScript::POS_READY
+); ?>
+
 <?=Yii::app()->clientScript->registerScriptFile(
 	Yii::app()->request->baseUrl . '/assets/697e102a/jquery.cookie.js',
 	CClientScript::POS_HEAD

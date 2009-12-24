@@ -61,6 +61,33 @@ class AdminToolbox extends CWidget
 			usort($tags, 'tagsSort');
 
 			$staistics['popularTags'] = $tags;			
+		} elseif($this->controller->id == 'author') {
+			$staistics['totalCount'] = Author::model()->count();
+			
+			$criteria = new CDbCriteria();
+			$criteria->order = 'name';
+			$criteria->limit = 10;
+			$authors = Author::model()->with('quotesCount')->findAll($criteria);
+			
+			// Delete authors with empty quotesCount (With PHP > 5.3 e can use closure here).
+			// TODO: Rewrite this code for PHP 5.3 when it will be avaliable.
+			function authorsFilter($author)
+			{
+				return (boolean)$author->quotesCount;
+			}
+			$authors = array_filter($authors, 'authorsFilter');
+			
+			// Sort tags by their weights (quotesCount).
+			function authorsSort($a, $b)
+			{
+				if($a->quotesCount == $b->quotesCount)
+					return 0;
+	
+				return ($a->quotesCount > $b->quotesCount) ? -1 : 1;
+			}
+			usort($authors, 'authorsSort');
+
+			$staistics['popularAuthors'] = $authors;
 		}
 		
 		return $staistics;

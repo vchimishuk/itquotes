@@ -21,9 +21,9 @@
 	'class' => 'small',
 ))?><br /><br />
 
-<?=CHtml::label('Author', 'search[author]')?><br />
-<?=CHtml::textField('search[author]', $search['author'], array(
-	'class' => 'small',
+<?=CHtml::label('Author', 'search[authorId]')?><br />
+<?=CHtml::dropDownList('search[authorId]', $search['authorId'], array(0 => '-- All --') + CHtml::listData($authors, 'id', 'name'), array(
+        'class' => 'small',
 ))?><br /><br />
 
 <?=CHtml::radioButtonList('search[approved]', $search['approved'], array(
@@ -63,7 +63,11 @@
 				<? endif; ?>
 				<?=CHtml::encode($quote->textRu)?>
 			</td>
-			<td class="bottom"><?=CHtml::encode($quote->author)?></td>
+			<td class="bottom">
+	                        <? if($quote->author): ?>
+	                                <?=CHtml::link($quote->author->name, array('author/edit', 'id' => $quote->author->id))?>
+	                        <? endif; ?>
+	                </td>
 			<td class="bottom">
 				<?=CHtml::link('Edit', array('edit', 'id' => $quote->id))?>
 				<?=CHtml::link('Delete', array('delete', 'id' => $quote->id), array(

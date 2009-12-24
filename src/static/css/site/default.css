@@ -426,6 +426,11 @@ img.right {
 
 #footer .copyright {
 }
+
+.content a {
+    font-weight: bold;
+}
+
 /* Tags cloud */
 .tags-cloud {
 	padding-right: 10px;
@@ -448,12 +453,20 @@ img.right {
 
 }
 
+.author-name a {
+    font-weight: normal;
+}
+
 .tags-title {
     /* font-weight: bold; */
 }
 
 .tags-name {
 
+}
+
+.tags-name a {
+    font-weight: normal;
 }
 
 .language-title {
@@ -468,19 +481,20 @@ img.right {
 	padding-top: 10px;
 }
 
-input, textarea {
+input, textarea, select {
     border: 1px solid #ddd4d9;
     background-color: #ffffff;
     color: #696969;
 }
 
+input.small, select.small {
+    width: 200px;
+}
+
+
 textarea.add {
     width: 350px;
     height: 100px;
-}
-
-.content a {
-    font-weight: bold;
 }
 
 /* Validation errors. */

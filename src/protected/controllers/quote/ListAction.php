@@ -20,36 +20,36 @@ class ListAction extends CAction
 			else
 				$search = array(
 					'text' => '',
-					'author' => '',
+					'authorId' => 0,
 					'approved' => 'all',
 				);
 		}
 
-
 		$criteria = new CDbCriteria();
-		$criteria->condition = '(textRu LIKE :text OR textEn LIKE :text) AND author LIKE :author '
-				     . ($search['approved'] == 'approved' ? 'AND approvedTime ' : '')
-				     . ($search['approved'] == 'unApproved' ? 'AND (approvedTime IS NULL OR approvedTime = 0)' : '');
-		$criteria->params = array(
-			':text' => "%{$search['text']}%",
-			':author' => "%{$search['author']}%",
-		);
-		$criteria->order = 'nameEn';
-
-
-		$criteria->order = 'id DESC';
+		$criteria->condition = '(textRu LIKE :text OR textEn LIKE :text) '
+			. ($search['authorId'] ? 'AND authorId = :authorId ' : '')
+			. ($search['approved'] == 'approved' ? 'AND approvedTime ' : '')
+			. ($search['approved'] == 'unApproved' ? 'AND (approvedTime IS NULL OR approvedTime = 0) ' : '');
+		$criteria->params = array(':text' => "%{$search['text']}%")
+			+ ($search['authorId'] ? array(':authorId' => $search['authorId']) : array());
+		$criteria->order = 'Quote.id DESC';
 
 		$pages = new CPagination(Quote::model()->count($criteria));
 		$config->applyTo($pages);
 		$pages->applyLimit($criteria);
 
-		$quotes = Quote::model()->with('tags')->findAll($criteria);
+		$quotes = Quote::model()->with('tags', 'author')->findAll($criteria);
 		
 		$showSearchForm = !empty($cookies['showSearchForm']) && $cookies['showSearchForm']->value ? true : false;
+
+		$criteria = new CDbCriteria();
+		$criteria->order = 'name';
+		$authors = Author::model()->findAll($criteria);
 				
 		$this->controller->render('list', array(
 			'quotes' => $quotes,
 			'pages' => $pages,
+			'authors' => $authors,
 			'search' => $search,
 			'showSearchForm' => $showSearchForm,
 		));

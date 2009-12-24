@@ -1,3 +1,4 @@
+<? /*
 <!-- HotLog -->
 <div style="display:none;">
   <script type="text/javascript" language="javascript">
@@ -35,3 +36,4 @@
   </noscript>
 </div>
 <!-- /HotLog -->
+   */ ?>

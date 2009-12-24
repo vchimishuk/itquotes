@@ -5,14 +5,17 @@ class EditAction extends CAction
 	{
 		if($this->id == 'edit') {
 			$id = !empty($_GET['id']) ? $_GET['id'] : 0;
-			$quote = Quote::model()->with('tags')->findByPk($id);
+			$quote = Quote::model()->with('tags', 'author')->findByPk($id);
 			
 			if($quote === null)
 				throw new CHttpException(404, 'Quote not found');
 		} else { // add action
 			$quote = new Quote();
 		}
-			
+
+		if(!$quote->author)
+			$quote->author = new Author();
+
 		if(!empty($_POST['Quote']) && is_array($_POST['Quote'])) {
 			$quote->attributes = $_POST['Quote'];
 
@@ -24,6 +27,33 @@ class EditAction extends CAction
 				$quote->approvedTime = time();
 			elseif(!$approved)
 				$quote->approvedTime = 0;
+
+			/*
+			 * Process author.
+			 */
+			if($_POST['Quote']['authorId']) {
+				// Existing author.
+				$author = Author::model()->findByPk($_POST['Quote']['authorId']);
+				if($author === null)
+					throw new CException("Author with \"{$_POST['Quote']['authorId']}\" not found.");
+			} else {
+				// New author.
+				$authorName = $_POST['Quote']['authorCustomName'];
+
+				// At first try to find author with the same name.
+				$criteria = new CDbCriteria();
+				$criteria->condition = 'name = :name';
+				$criteria->params = array(
+					':name' => $authorName,
+				);
+				$author = Author::model()->find($criteria);
+				if($author === null) {
+					$author = new Author();
+					$author->name = $authorName;
+					$author->save();
+				}
+			}
+			$quote->authorId = $author->id;
 
 			/*
 			 * Process tags.
@@ -45,7 +75,14 @@ class EditAction extends CAction
 				$this->controller->redirect(array('list'));
 			}
 		}
+
+		$criteria = new CDbCriteria();
+		$criteria->order = 'name';
+		$authors = Author::model()->findAll($criteria);
 		
-		$this->controller->render('edit', array('quote' => $quote));	
+		$this->controller->render('edit', array(
+						  'quote' => $quote,
+						  'authors' => $authors,
+					  ));	
 	}
 }

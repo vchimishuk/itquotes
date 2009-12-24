@@ -1,7 +1,6 @@
-<h1>Edit quote</h1>
+<h1>Edit author</h1>
 
 <?=$this->renderPartial('_form', array(
-	'quote' => $quote,
-	'authors' => $authors,
+        'author' => $author,
 	'create' => false,
 ))?>

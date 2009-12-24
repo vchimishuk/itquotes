@@ -8,7 +8,13 @@
   <? endif; ?>
   <p>
     <? if($quote->author): ?>
-      <span class="author-title">Author:</span> <span class="author-name"><?=$quote->author?></span><br />
+      <span class="author-title">Author:</span>
+      <span class="author-name">
+	<a href="<?=$this->createAbsoluteUrl('author', array('authorId' => $quote->author->id))?>">
+	  <?=$quote->author->name?>
+	</a>
+      </span>
+      <br />
     <? endif; ?>
     <? if($quote->tags): ?>
       <span class="tags-title">Tags:</span>

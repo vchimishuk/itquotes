@@ -1,3 +1,8 @@
+<?=Yii::app()->clientScript->registerScriptFile(
+	Yii::app()->request->baseUrl . '/static/js/admin/quote/_form.js',
+	CClientScript::POS_HEAD
+)?>
+
 <?=CHtml::beginForm()?>
 	<? if(CHtml::errorSummary($quote)):?>
 		<?=CHtml::errorSummary($quote)?>
@@ -17,9 +22,15 @@
 		'class' => 'large',
 	))?>
 	<br /><br />
-	
-	<?=CHtml::activeLabelEx($quote, 'author')?><br />
-	<?=CHtml::activeTextField($quote, 'author')?>
+
+	<?=CHtml::activeLabelEx($quote, 'authorId')?><br />
+	<?=CHtml::dropDownList('Quote[authorId]', $quote->author->id, array(0 => 'new...') + CHtml::listData($authors, 'id', 'name'), array(
+	        'onchange' => 'onAuthorsListChange(this)',
+	        'class' => 'small',
+	))?>
+	<?=CHtml::textField('Quote[authorCustomName]', $quote->author->name,
+	        $quote->author->id ? array('readonly' => true) : array()
+	)?>
 	<br /><br />
 
 	<?=CHtml::activeLabelEx($quote, 'Notes')?><br />

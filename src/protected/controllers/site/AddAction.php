@@ -11,8 +11,8 @@ class AddAction extends CAction
 				$quote = new Quote();
 				$quote->textEn = $form->textEn;
 				$quote->textRu = $form->textRu;
-				$quote->author = $form->author;
-				$quote->notes = $form->notes;
+				$quote->authorId = 0;
+				$quote->notes = $form->author . ' : ' . $form->notes;
 				
 				if($quote->save()) {
 					$this->controller->redirect(array('addThanks'));

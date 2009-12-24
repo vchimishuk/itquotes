@@ -2,5 +2,5 @@
 class SearchForm extends CFormModel
 {
 	public $text = '';
-	public $author = '';
+	public $authorId = '';
 }

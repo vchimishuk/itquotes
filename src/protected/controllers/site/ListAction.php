@@ -13,7 +13,7 @@ class ListAction extends CAction
 		$config->applyTo($pages);
 		$pages->applyLimit($criteria);
 
-		$quotes = Quote::model()->with('tags')->findAll($criteria);
+		$quotes = Quote::model()->with('tags', 'author')->findAll($criteria);
 
 		$this->controller->render('list', array(
 			'quotes' => $quotes,

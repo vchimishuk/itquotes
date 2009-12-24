@@ -11,8 +11,8 @@
   <tr>
     <td><?=CHtml::activeLabelEx($form, 'author')?>:</td>
     <td>
-      <?=CHtml::activeTextField($form, 'author', array(
-				       'maxlength' => 255,
+      <?=CHtml::dropDownList('SearchForm[authorId]', $form->authorId, array(0 => '-- All ---') + CHtml::listData($authors, 'id', 'name'), array(
+        'class' => 'small',
       ))?>
     </td>
   </tr>
