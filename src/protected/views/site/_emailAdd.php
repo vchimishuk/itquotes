@@ -4,4 +4,4 @@ New quote was added.
 <?=$quote->textRu?>
 
 ---
-<?=$this->createAbsoluteUrl('admin')?>
+<?=$this->createAbsoluteUrl('/admin')?>
