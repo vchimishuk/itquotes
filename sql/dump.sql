@@ -1,55 +1,55 @@
--- MySQL dump 10.13  Distrib 5.1.41, for pc-linux-gnu (i686)
---
--- Host: localhost    Database: itquotes
--- ------------------------------------------------------
--- Server version	5.1.41
+/*
+SQLyog Community Edition- MySQL GUI v8.15 RC
+MySQL - 5.1.41 : Database - itquotes_server-27.12.2009
+*********************************************************************
+*/
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
+
+/*!40101 SET SQL_MODE=''*/;
+
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*Table structure for table `Author` */
 
---
--- Table structure for table `Quote`
---
+DROP TABLE IF EXISTS `Author`;
+
+CREATE TABLE `Author` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+
+/*Data for the table `Author` */
+
+insert  into `Author`(`id`,`name`) values (62,'Р. Гэбриел'),(4,'Aaron Griffin'),(5,'Alan Curtis Kay'),(6,'Alan Jay Perlis'),(7,'Alanna'),(8,'Alex Papadimoulis'),(9,'Andrew Stuart Tanenbaum'),(10,'Bjarne Stroustrup'),(11,'Bob Gray'),(12,'Brian Kernigan'),(13,'Charles Babbage'),(14,'David Gelernter'),(15,'Dennis MacAlistair Ritchie'),(16,'Dmitry Galuscenko'),(17,'Donald Ervin Knuth'),(18,'Doug Gwyn'),(19,'Doug Linder'),(20,'Douglas McIlroy'),(61,'А. П. Ершов'),(22,'Edsger Wybe Dijkstra'),(23,'Eric Paul Allman'),(24,'Eric Steven Raymond'),(25,'Frederick Phillips Brooks'),(26,'Geoffrey James'),(27,'George Carrette'),(28,'Grady Booch'),(29,'Henry Spencer'),(30,'Jack W. Davidson'),(31,'Jack W. Reeves'),(32,'Jacob Kaplan-Moss'),(33,'Jamie Zawinski'),(34,'Joel Spolsky'),(35,'John Johnson'),(36,'Jon Ribbens'),(37,'Keith Bostic'),(38,'Kenneth Thompson'),(39,'Larry Wall'),(40,'Linus Benedict Torvalds'),(41,'Martin Fowler'),(42,'Matthias Ettrich'),(43,'Michael Braude'),(44,'Niklaus Wirth'),(45,'Oktal'),(46,'Paul Graham'),(47,'Philip Greenspun'),(48,'Rich Cook'),(49,'Richard Matthew Stallman'),(50,'Rob Pike'),(51,'Robert W Floyd'),(52,'Scott Adams'),(53,'Stanisław Jerzy Lec'),(54,'William Henry Gates'),(55,'М. Мичэм'),(56,'Марк Дэвидсон'),(57,'Роберт Ковзю'),(58,'Т. Джон Уэнделл'),(59,'Чарльз Портман'),(60,'Э. Йодан');
+
+/*Table structure for table `Quote` */
 
 DROP TABLE IF EXISTS `Quote`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `Quote` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `textRu` text CHARACTER SET latin1 COLLATE latin1_general_ci,
-  `textEn` text CHARACTER SET latin1 COLLATE latin1_general_ci,
-  `author` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `textRu` text,
+  `textEn` text,
+  `authorId` int(10) unsigned NOT NULL DEFAULT '0',
+  `notes` varchar(255) DEFAULT NULL,
   `createdTime` int(11) NOT NULL,
-  `approvedTime` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `approvedTime` int(11) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `approvedTime` (`approvedTime`)
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 
---
--- Dumping data for table `Quote`
---
+/*Data for the table `Quote` */
 
-LOCK TABLES `Quote` WRITE;
-/*!40000 ALTER TABLE `Quote` DISABLE KEYS */;
-INSERT INTO `Quote` VALUES (8,'Beauty is more important in computing than anywhere else in technology because software is so complicated. Beauty is the ultimate defence against complexity.','Beauty is more important in computing than anywhere else in technology because software is so complicated. Beauty is the ultimate defence against complexity.','David Gelernter',1254297509,NULL),(9,'Measuring programming progress by lines of code is like measuring aircraft building progress by weight','Measuring programming progress by lines of code is like measuring aircraft building progress by weight','Bill Gates',1254297509,NULL),(10,'I don\'t do build tests before comitting; users generate better error messages than gcc','I don\'t do build tests before comitting; users generate better error messages than gcc','Some KDE developer',1254297509,1254487146),(12,'I\'ve always lived cheaply … like a student, basically. And I like that, because it means that money is not telling me what to do','I\'ve always lived cheaply … like a student, basically. And I like that, because it means that money is not telling me what to do','Stallman, Richard',1254297509,1254324470),(13,'','Some people, when confronted with a problem, think\r\n“I know, I\'ll use regular expressions.”   Now they have two problems','Jamie Zawinski',1254297509,1254304537),(14,'So I really hope everybody’s wrong and everything doesn’t ”move to the web.”  Because if it does, one day I will either have to reluctantly join this boring movement, or I’ll have to find another profession','So I really hope everybody’s wrong and everything doesn’t ”move to the web.”  Because if it does, one day I will either have to reluctantly join this boring movement, or I’ll have to find another profession','Michael Braude',1254297509,1254300355),(20,NULL,NULL,NULL,1254398505,NULL);
-/*!40000 ALTER TABLE `Quote` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `Quote`(`id`,`textRu`,`textEn`,`authorId`,`notes`,`createdTime`,`approvedTime`) values (1,'','I\'ve always lived cheaply… like a student, basically. And I like that, because it means that money is not telling me what to do.',49,'2001-05-29',1260306827,1260306851),(2,'','Some people, when confronted with a problem, think \"I know, I\'ll use regular expressions\". Now they have two problems.',33,'',1260306935,1260306935),(3,'','Controlling complexity is the essence of computer programming.',12,'',1260306964,1260306964),(4,'','The function of good software is to make the complex appear to be simple.',28,'',1260306994,1260306994),(5,'','Programmers are in a race with the Universe to create bigger and better idiot-proof programs, while the Universe is trying to create bigger and better idiots.  So far the Universe is winning.',48,'',1260307035,1260307035),(6,'','Most of you are familiar with the virtues of a programmer.  There are three, of course: laziness, impatience, and hubris.',39,'',1260307080,1260307080),(7,'Никто не сможет стать выдающимся программистом, изучая компьютерные науки, или выдающимся художником, изучая кисти и краски.','Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.',24,'',1260307110,1260307110),(8,'','Don’t worry if it doesn’t work right.  If everything did, you’d be out of a job.',0,'Mosher’s Law of Software Engineering',1260307141,1260307141),(9,'','First learn computer science and all the theory.  Next develop a programming style.  Then forget all that and just hack.',27,'',1260307264,1260307264),(10,'','First, solve the problem. Then, write the code.',35,'',1260307328,1260307328),(11,'','The best thing about a boolean is even if you are wrong, you are only off by a bit.',0,'',1260307340,1260307340),(12,'','There are only two kinds of programming languages: those people always bitch about and those nobody uses.',10,'',1260308795,1260308795),(13,'','PHP is a minor evil perpetrated and created by incompetent amateurs, whereas Perl is a great and insidious evil perpetrated by skilled but perverted professionals.',36,'',1260308830,1260308835),(14,'','I think Microsoft named .Net so it wouldn’t show up in a Unix directory listing.',45,'',1260308880,1260308972),(15,'','Computer language design is just like a stroll in the park.  Jurassic Park, that is.',39,'',1260308936,1260308958),(16,'','Writing in C or C++ is like running a chain saw with all the safety guards removed.',11,'',1260308954,1260308954),(17,'','Saying that Java is nice because it works on all OSes is like saying that anal sex is nice because it works on all genders.',7,'',1260309029,1260309029),(18,'Если прогресс искусства программирования в целом требует постоянного изобретения и усовершенствования парадигм, то совершенствование искусства отдельного программиста требует, чтобы он расширял свой репертуар парадигм.','',51,'',1260381427,1260381721),(19,'Лучший способ подготовиться состоит в том, чтобы писать программы и изучать хорошие программы, написанные другими... Я выуживал листинги операционных систем в мусорных корзинах Вычислительного Центра.','',54,'',1260482974,1260482974),(20,'','We could think of these things as applications, not pages?',32,'http://jacobian.org/writing/snakes-on-the-web',1260982522,1260982522),(21,'','And yet, most people seem to want to program in a limiting box called a web browser in a \"language\" called HTML.',43,'',1260982677,1260982850),(22,'','The reason most people want to program for the web is that they’re not smart enough to do anything else.',43,'',1260982716,1260982847),(23,'','So I really hope everybody’s wrong and everything doesn’t \"move to the web\".  Because if it does, one day I will either have to reluctantly join this boring movement, or I’ll have to find another profession.',43,'',1260982769,1260982843),(24,'','It\'s true that any J. Random Coder can plop out a terrible web application, and 99% of web applications are absolute crap.',43,'',1260982816,1260982816),(25,'Я бы мог зарабатывать деньги [в мире проприетарного ПО], и, возможно, даже получать удовольствие от процесса написания кода. Но я знал, что в конце моей карьеры мне захочется оглянуться назад, и тогда я увижу как строил стены между людьми, как я делал мир хуже.','',49,'',1260982915,1260982915),(26,'Надежда на графический интерфейс для настройки/использования Вашей системы в конце концов принесет пользователю только проблемы. В какой-то момент времени пользователь почувствует, что ему нужно знать что скрывает графический интерфейс.','',0,'',1260982957,1260982957),(27,'Код и есть проект','The code is the design.',31,'',1260984447,1260984447),(28,'Если в Linux не существует решения вашей проблемы... То у вас неправильная проблема.','',0,'',1260984486,1260984491),(29,'Лучшим дистрибутивом Linux является тот дистрибутив, который любит ваш знакомый гуру.','',0,'',1260984519,1260984979),(30,'Если программисты заслуживают вознаграждения за создание прогрессивных программ, то также они заслуживают и наказания, если они ограничивают использование этих программ.','',49,'',1260984546,1260984546),(31,'Во-первых, даже опытнейший разработчик для Windows NT не может быть первоклассным хакером, так как для того, чтобы набраться опыта программирования для Windows NT, необходимо добровольно и неоднократно использовать эту платформу, а я не могу себе представить выдающегося хакера за этим занятием.','',46,'',1260984609,1260984609),(32,'До тех пор пока Вам удается сохранять любовь к программированию, результаты будут высокими.','',46,'',1260984682,1260984682),(33,'Это (язык программирования) наполовину технология, наполовину религия.','',46,'',1260984706,1260984706),(34,'','Любая достаточно сложная программа на C или Фортране содержит заново написанную, неспецифицированную, глючную и медленную реализацию языка Common Lisp.',47,'',1260984764,1260984764),(35,'Архитектура x86 - это победа маркетинга над здравым смыслом.','',0,'',1260984969,1260984969),(36,'Pentium II содержит старый набор команд CISC, который инженеры компании Intel были бы рады выкинуть в бухту Сан-Франциско, но тогда они нарушили бы законы о загрязнении воды.','',9,'',1260985040,1260985040),(37,'Проблема с десктопами решена давно. Я имею в виду: попробуйте сравнить Windows XP с KDE3, никто в здравом уме не отдал бы предпочтение Windows, на фоне GNU/Linux, исходя только из пользовательского опыта.','',42,'Owner of KDE project',1260985094,1260985094),(38,'Сейчас, я работаю с Python, когда я могу, а с С — когда должен. Несмотря на незначительные недостатки, я думаю, что питон — наиболее выразительный и мощный язык, который я когда-либо использовал.','',24,'',1260985174,1260985174),(39,'','Other than the fact Linux has a cool name, could someone explain why I should use Linux over BSD? No. That\'s it. The cool name, that is. We worked very hard on creating a name that would appeal to the majority of people, and it certainly paid off: thousands of people are using linux just to be able to say \"OS/2? Hah. I\'ve got Linux. What a cool name\". 386BSD made the mistake of putting a lot of numbers and weird abbreviations into the name, and is scaring away a lot.',40,'',1260985292,1260985292),(40,'Программисты на Лиспе знают значение всего на свете, но ничему не знают цену.','',6,'',1260985365,1260985365),(41,'KDE - это больше не программы, создаваемые людьми, это люди, создающие программы.','',0,'',1260985381,1260985381),(42,'Если прогресс искусства программирования в целом требует постоянного изобретения и усовершенствования парадигм, то совершенствование искусства отдельного программиста требует, чтобы он расширял свой репертуар парадигм.','',51,'',1260985413,1260985413),(43,'Я слабо представляю себе полезность квалификации программера неспособного воспринимать код на Си ...','',0,'',1260985434,1260985525),(45,'Дважды (члены Парламента) задавали мне вопрос: \"А скажите, мистер Бэббидж, если вы заложите в эту машину неверные числа, то получите правильный результат?\" Не могу даже представить себе, насколько извращённо должен мыслить человек, задающий такие вопросы.','',13,'',1261077220,1261077220),(46,'Программы должны быть написаны так, чтобы их могли читать люди, и только иногда так, чтобы их могли выполнять машины.','',0,'',1261077314,1261077314),(47,'Если вы покажете мне код и скроете структуры данных, я ничего не пойму в вашей программе. Однако, если вы покажете мне структуры данных, код скорее всего не понадобится. Он будет очевиден.','',25,'',1261077382,1261077382),(48,'Требовать и эффективности, и гибкости от одной и той же программы - все равно, что искать очаровательную и скромную жену... по-видимому, нам следует остановиться на чем-то одном из двух.','',25,'',1261077416,1261077416),(49,'Чтобы обнаруживать ошибки, программист должен иметь ум, которому доставляет удовольствие находить изъяны там, где, казалось, царят красота и совершенство.','',25,'',1261077453,1261077453),(50,'Выдавать глобальные идеи - это удовольствие; искать сволочные маленькие ошибки - вот настоящая работа.','',25,'',1261077472,1261077472),(51,'Настойчивость руководителя может определить график выполнения задания, но не в состоянии определить срок его действительного завершения.','',25,'',1261077504,1261077504),(52,'Глупец, лишенный способности посмеяться над собой вместе с другими, не сможет долго выносить программирование.','',25,'',1261077551,1261077551),(53,'Если за две минуты омлет еще не готов, у заказчика два выбора - подождать или съесть его сырым.','',25,'',1261077684,1261077684),(54,'Никогда программы не содержат так мало ошибок, как при отсутствии каких-либо средств отладки.','',44,'',1261077804,1261077804),(55,'UNIX не был разработан так, чтобы отгораживать своих пользователей от глупостей, поскольку это отгородило бы их от делания умных вещей.','',18,'',1261077880,1261077880),(56,'Программа должна быть легкой и грациозной, ее подпрограммы соединены, как\r\nнити жемчуга. Дух и назначение программы должны быть кристально ясны. Она не\r\nдолжна быть ни слишком большой, ни слишком маленькой, никаких бесполезных\r\nциклов или неиспользуемых переменных, ни недостатка структурности, ни избытка\r\nжесткости.','',26,'The Tao of Programming',1261133362,1261221409),(57,'UNIX прост, но надо быть гением, чтобы понять его простоту.','',15,'',1261218390,1261218390),(58,'...время идет, и за компьютеры садятся те, кто разбирается в них все меньше и меньше...','',9,'Архитектура ЭВМ',1261218467,1261218467),(59,'Ошибка? Это не ошибка, это системная функция.','',58,'',1261219481,1261219481),(60,'Разработчик ПО — это уникальная профессия, в которой мы можем использовать свои умения, как для работы, так и для хобби. В отличие от бухгалтеров, которые вряд ли спешат домой, чтобы подбить баланс семейного бюджета, многие из нас частенько возятся с кодом забавы ради и удовольствия для.','',8,'',1261219661,1261219661),(61,'С течением времени программирование из тонкого ремесла, иногда восходящего к искусству, становилось ремеслом все более и более рутинным.','',0,'',1261220554,1261220554),(62,'Философия Linux говорит: \"Смейся перед лицом опасности!\". Ой. Не правильно. \"Сделай это сам!\" Да, теперь похоже.','',40,'',1261220892,1261220892),(63,'Хороший программист обязательно посмотрит в обе стороны, даже если переходит улицу с односторонним движением.','',19,'',1261220982,1261220982),(64,'Если вы плохо умеете программировать - не расстраивайтесь! Для вас всегда найдется работа в Microsoft.','',0,'',1261221009,1261221009),(65,'Информатика не более наука о компьютерах, чем астрономия — наука о телескопах.','Computer Science is no more about computers than astronomy is about telescopes.',22,'',1261221064,1261221064),(66,'','Manually managing blocks of memory in C is like juggling bars of soap in a prison shower: It’s all fun and games until you forget about one of them.',0,'anonymous Usenet user',1261221107,1261221107),(67,'','Perl: The only language that looks the same before and after RSA encryption.',37,'',1261221140,1261221140),(68,'','I don\'t do build tests before comitting; users generate better error messages than gcc.',0,'Some KDE developer',1261221231,1261221231),(69,'Простота подразумевается не с позиции конечного использования, а с технической точки зрения. Лучше стремиться к технической элегантности, нежели быть простым в использовании, но мусором с технической точки зрения.','',4,'',1261221309,1261221309),(70,'','Those who do not understand Unix are doomed to reinvent it, poorly.',29,'1987',1261221350,1261221350),(71,'','Not only is UNIX dead, it\'s starting to smell really bad.',50,'1991',1261221382,1261221382),(72,'Если в верхнеуровневых языках дамы еще попадаются, к сям и ассемблерам практически исчезают, то в нашей области я не слышал о них вообще.','',16,'',1261221492,1261221492),(73,'По каким-то причинам большинство людей рождается без того участка мозга, который нужен для понимания указателей. Для указателей требуется сложный вид дважды косвенного мышления, которое некоторым людям просто недоступно, но для хорошого программирования оно очень важно.','',34,'',1261221571,1261221571),(74,'Человеческие существа несколько менее предсказуемые чем обычный процессор Intel.','',0,'',1261221657,1261221657),(75,'','Beauty is more important in computing than anywhere else in technology because software is so complicated. Beauty is the ultimate defence against complexity.',14,'',1261221696,1261221696),(76,'','Measuring programming progress by lines of code is like measuring aircraft building progress by weight.',54,'',1261221766,1261221766),(77,'Как только проект окончательно принят, он становится устаревшим в смысле своих концепций.','',25,'',1261222453,1261222453),(78,'Когда кажется, что все уже работает, все объединено в систему - вам еще осталось работы на четыре месяца.','',59,'',1261222540,1261222540),(79,'Генерация случайных чисел - слишком важный вопрос, чтобы оставлять его на волю случая.','',57,'Окриджская лаборатория',1261222595,1261222595),(80,'Пользователь не знает, чего он хочет, пока не увидит то, что он получил.','',60,'',1261222687,1261222687),(81,'Если отладка - процесс удаления ошибок, то программирование должно быть процессом их внесения.','',22,'',1261222786,1261222786),(82,'Вы уже дошли до состояния, когда у вас нет времени, чтобы разрешить те проблемы, которые отнимают у вас все время?','',56,'',1261222833,1261222833),(83,'Компьютеры бесподобны: за несколько минут они могут совершить такую грандиозную ошибку, какую не в состоянии сделать множество людей за многие месяцы.','',55,'',1261222861,1261222861),(84,'Существует огромное количество свидетельств тому, что правильная организация рабочего пространства увеличивает производительность программиста. Особенно это касается личных кабинетов.','',34,'http://russian.joelonsoftware.com/Articles/BionicOffice.html',1261226249,1261227298),(85,'В конце концов, это мое рабочее место. Здесь я провожу значительную часть своей жизни вдали от родных и друзей. Такое место должно быть классным.','',34,'',1261226532,1261227290),(87,'Успех вашего бизнеса зависит от того, какие именно программисты практически живут в вашем офисе. Для того, чтобы это делали все, необходимо, чтобы ваш офис был лучше, чем дом среднестатистического программиста. Есть два способа достигнуть этого: один из них состоит в том, чтобы нанимать на работу программистов, живущих в хибарах. Второй способ – создать по-настоящему классный офис.','',47,'',1261227570,1261227570),(88,'UNIX никогда не скажет \"пожалуйста\".','',50,'',1261332303,1261332303),(89,'Я испытываю отвращение к системе, разработаннной для \"пользователя\", если в слове \"пользователь\" закодировано уничижительное значение \"тупой и примитивный\".','',38,'',1261332384,1261332384),(90,'Любой может писать код понятный компьютеру, другое дело писать код понятный человеку.','',41,'',1261332466,1261332466),(91,'Данные преобладают. При правильной и хорошо организованной структуре данных, алгоритмы становятся очевидными. Структуры данных, а не алгоритмы, являются центральной частью в программировании.','',50,'',1261332537,1261332537),(92,'Совершенство в разработке достигается не тогда, когда нечего добавить, а тогда когда нечего убрать. Если ваш код становится одновременно и лучше и проще, вы поступаете правильно.','',24,'',1261332625,1261332625),(93,'Философия UNIX гласит: Пишите программы, которые делают одну вещь и делают её хорошо; Пишите программы, которые бы работали вместе; Пишите программы, которые бы поддерживали текстовые потоки, поскольку это универсальный интерфейс.','',20,'',1261332795,1261332795),(94,'Студентов, ранее изучавших Бейсик, практически невозможно обучить хорошему программированию. Как потенциальные программисты они подвеглись необратимой умственной деградации.','',22,'',1261332875,1261332875),(95,'','When I write a C program of any size, I probably will wind-up using 75, 80, 90% of the language features. In other words, most of the language is useful in almost any kind of program. By contrast, if I write in C++ I probably don\'t use even 10% of the language, and in fact the other 90% I don\'t think I understand.',12,'',1261332945,1261332945),(96,'Сделайте систему для дураков и только дураки захотят ею пользоваться.','',0,'',1261332983,1261332983),(97,'На языке, в котором чего-то не хватает, программировать всегда проще, чем на языке, который богат своими возможностями.','',15,'',1261333006,1261333006),(98,'Я придумал термин \"объектно-ориентиронный\", но уверяю вас, я совсем не имел в виду С++.','',5,'',1261333077,1261333077),(99,'Дизайн Smalltalk — и его существование вообще — обусловлен тем, что все, что мы можем описать, возможно представить рекурсивной композицией отдельных видов поведенческих строительных блоков, которые внутри самих себя скрывают свою текущую комбинацию состояния и процессов, и могут взаимодействовать друг с другом только посредством обмена сообщениями.','',5,'',1261333107,1261333107),(100,'Программист который познакомился с новой технологией похож на маниака получившего в подарок новенькую бензопилу. Ему не терпится ее опробовать.','',0,'',1261333251,1261333251),(101,'Как скомканный кусок глины не является скульптурой, так беспорядочный набор кода не является программой.','',0,'',1261333303,1261333303),(102,'Одни языки создаются для решения задачи, другие - для доказательства той или иной точки зрения.','',15,'',1261333369,1261333369),(103,'Машина должна работать, человек - думать.','',0,'Лозунг IBM',1261333468,1261333468),(104,'За Linux стоит гораздо более естественный способ распространения технологии, знания, богатства и развлечения, чем тот, что принят в коммерческом мире.','',40,'Just For Fun',1261333535,1261333535),(105,'Лучший способ в чём-то разобраться до конца — это попробовать научить этому компьютер.','',17,'',1261333674,1261333674),(106,'Электронный мозг будет думать за нас точно так же, как электрический стул за нас умирает.','',53,'',1261333734,1261333734),(107,'Глубоко ошибается тот, кто думает, что изделиями программистов являются программы, которые они пишут. Программист обязан создавать заслуживающие доверия решения и представлять их в форме убедительных доводов, а текст написанной программы является лишь сопроводительным материалом, к которому эти доказательства применимы.','',22,'',1261333844,1261333844),(108,'Если вы считаете, что C++ труден, попытайтесь выучить английский.','',10,'',1261333927,1261333927),(109,'C позволяет легко выстрелить себе в ногу; C++ делает это сложнее, но, когда вы это делаете, отстреливает всю вашу ногу.','',10,'',1261333949,1261333949),(110,'Если хоть кто-нибудь мог вообразить, что в течение 10 лет эта крошечная система (MS DOS), которая была создана почти случайно, будет контролировать 50 миллионов компьютеров, значительно больше интеллектуальных усилий могло бы быть вложено в нее.','',9,'',1261334007,1261334007),(111,'','Unix is the answer, but only if you phrase the question very carefully. Unix is user-friendly. It\'s just very selective about who its friends are. Unix: It\'s not just \"User-Unfriendly\", it\'s \"Proactively User-Hostile\"!  ',0,'',1261334221,1261334221),(112,'','Unix gives you just enough rope to hang yourself -- and then a couple of more feet, just to be sure.',23,'',1261334335,1261334335),(113,'','VMS is a text-only adventure game. If you win you can use Unix.',30,'',1261334397,1261334397),(114,'','If you have trouble sounding condescending, find a Unix user to show you how it\'s done.',52,'',1261334432,1261334431),(115,'Рождение ребенка занимает девять месяцев независимо от того, сколько женщин занято этим.','',25,'',1261429744,1261573278),(116,'Компетентный программист полностью осознает строго ограниченные возможности своего черепа, поэтому подходит к задачам программирования со всей возможной скромностью.','',22,'',1261432936,1261573247),(117,'Но знайте, что вы не достигнете хакерского уровня мастерства (или даже просто уровня хорошего программиста), если будете знать лишь один или два языка. Вам необходимо научиться мыслить об алгоритмических проблемах вообще, независимо от языка программирования. Чтобы быть настоящим хакером, вам надо достичь уровня, на котором вы сможете выучить новый язык за несколько дней, соотнося положения руководства с тем, что вам уже известно. Это означает, что вам следует выучить несколько очень разных языков. ','',24,'',1261434137,1261573187),(118,'Учиться хакерству на машинах, работающих под DOS, Windows или MacOS - это все равно что учиться танцевать, будучи полностью загипсованным. ','',24,'',1261434221,1261573139),(119,'Однако я обнаружил, что понимание указателей в Си — это не навык, а способность.','',34,'http://russian.joelonsoftware.com/Articles/Interviewing.html',1261734117,1261822278),(120,'Хороший программист, работающий над собственным проектом, может удерживать его целиком в голове так, как удерживает математик уравнение, которое решает. Математики не решают задачи на листке бумаги, так, как этому учат детей в школе. Вместо этого большинство операций они производят в уме, создавая некий образ в голове, примерно как мы можем мысленно представить образ дома, в котором провели детство. С программированием все точно так же. Вы можете создать некий образ всего текущего проекта в голове и рассмотреть его тщательно со всех сторон.','A good programmer working intensively on his own code can hold it in his mind the way a mathematician holds a problem he\'s working on. Mathematicians don\'t answer questions by working them out on paper the way schoolchildren are taught to. They do more in their heads: they try to understand a problem space well enough that they can walk around it the way you can walk around the memory of the house you grew up in. At its best programming is the same. You hold the whole program in your head, and you can manipulate it at will.',46,'http://paulgraham.com/head.html',1262031388,1262031388),(121,'Переписывая код, вы зачастую улучшаете архитектуру приложения. Даже если и нет, в этом есть преимущество: чтобы переписать программу заново, необходимо полностью понимать ее суть. Так вы сможете воссоздать более точную картину программы у себя в голове.','Rewriting a program often yields a cleaner design. But it would have advantages even if it didn\'t: you have to understand a program completely to rewrite it, so there is no better way to get one loaded into your head.',46,'http://paulgraham.com/head.html',1262031586,1262031586),(122,'Я не имел в виду, что программисты на Java тупые. Я имел в виду, что программисты на Python’е сообразительнее. Ведь это огромная работа выучить новый язык программирования. Люди учат Python не потому, что он даст им возможность получить работу. Эти люди учат новый язык, потому что они искренне любят программировать и не удовлетворены теми языками, которые уже знают.\r\n','',46,'http://www.paulgraham.com/pypar.html',1262031784,1262031784),(123,'','It\'s harder to read code than to write it.',0,'',1262117751,1262117751),(124,'Язык, освоение которого не позволяет найти новые подходы к программированию, не заслуживает изучения.','',6,'http://www.williamspublishing.com/21-days.html',1262255128,1262255128),(125,'Каждого можно научить ваять, а Микеланджело достаточно было только объяснить, как не надо ваять. Точно так же обстоят дела с выдающимися программистами.','',6,'',1262255721,1262255721),(126,'До недавнего времени она проходила по разряду экзотических.\r\nА между тем эта профессия воплощает в себе едва ли не самые ценные свойства человеческого разума...','',61,'А. П. Ершов о профессии программиста, 1985',1262384857,1262384857),(127,'Программирование является, возможно, самой важной новой дисциплиной постиндустриальной эры.','',44,'Н. Вирт, 2002',1262384898,1262384898),(128,'Процесс разработки программного обеспечения для талантливых программистов – это, безусловно, искусство.','',62,'http://ai.obrazec.ru/programmer.htm',1262433244,1262433244);
 
---
--- Table structure for table `QuoteTag`
---
+/*Table structure for table `QuoteTag` */
 
 DROP TABLE IF EXISTS `QuoteTag`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `QuoteTag` (
   `quoteId` int(10) unsigned NOT NULL,
   `tagId` int(10) unsigned NOT NULL,
@@ -57,74 +57,42 @@ CREATE TABLE `QuoteTag` (
   KEY `quoteId` (`quoteId`),
   KEY `tagId` (`tagId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `QuoteTag`
---
+/*Data for the table `QuoteTag` */
 
-LOCK TABLES `QuoteTag` WRITE;
-/*!40000 ALTER TABLE `QuoteTag` DISABLE KEYS */;
-INSERT INTO `QuoteTag` VALUES (8,3),(8,7),(8,8),(9,8),(14,8);
-/*!40000 ALTER TABLE `QuoteTag` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `QuoteTag`(`quoteId`,`tagId`) values (1,7),(5,16),(8,1),(9,9),(11,1),(13,2),(13,17),(14,1),(14,3),(16,14),(17,4),(20,5),(21,5),(21,6),(22,5),(23,5),(24,5),(25,7),(26,16),(28,1),(28,12),(29,1),(29,12),(30,7),(31,8),(31,9),(34,10),(35,11),(36,1),(36,11),(37,8),(37,12),(38,13),(38,14),(39,1),(39,12),(39,15),(40,10),(43,14),(51,18),(54,1),(55,19),(57,19),(60,9),(62,12),(62,19),(64,8),(66,14),(67,17),(70,19),(71,19),(72,14),(73,14),(74,1),(74,11),(88,16),(88,19),(89,16),(93,19),(94,20),(95,14),(96,16),(98,22),(99,21),(104,12),(108,22),(109,14),(109,22),(110,3),(110,23),(111,16),(111,19),(112,19),(113,19),(114,19),(115,18),(118,8),(118,9),(118,23),(119,14),(122,13);
 
---
--- Table structure for table `Tag`
---
+/*Table structure for table `Tag` */
 
 DROP TABLE IF EXISTS `Tag`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `Tag` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 
---
--- Dumping data for table `Tag`
---
+/*Data for the table `Tag` */
 
-LOCK TABLES `Tag` WRITE;
-/*!40000 ALTER TABLE `Tag` DISABLE KEYS */;
-INSERT INTO `Tag` VALUES (3,'One'),(5,'Two'),(7,'Three'),(8,'Four'),(9,'Five'),(10,'Six'),(11,'7'),(12,'8'),(13,'9'),(15,'Ten'),(16,'Elleven'),(17,'Twelve');
-/*!40000 ALTER TABLE `Tag` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `Tag`(`id`,`name`) values (20,'basic'),(15,'bsd'),(14,'c'),(22,'c++'),(23,'dos'),(7,'freedom'),(9,'hack'),(6,'html'),(1,'humor'),(11,'intel'),(4,'java'),(12,'linux'),(10,'lisp'),(18,'managment'),(3,'microsoft'),(17,'perl'),(2,'php'),(13,'python'),(21,'smalltalk'),(19,'unix'),(16,'usability'),(5,'web'),(8,'windows');
 
---
--- Table structure for table `User`
---
+/*Table structure for table `User` */
 
 DROP TABLE IF EXISTS `User`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `User` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) COLLATE latin1_general_ci NOT NULL,
-  `password` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `User`
---
+/*Data for the table `User` */
 
-LOCK TABLES `User` WRITE;
-/*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES (1,'voice','e10adc3949ba59abbe56e057f20f883e');
-/*!40000 ALTER TABLE `User` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+insert  into `User`(`id`,`username`,`password`) values (1,'voice','b82706ae6d0717ad5870441aeb1d4feb');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2009-12-02 15:03:05
