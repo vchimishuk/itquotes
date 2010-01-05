@@ -38,7 +38,7 @@ return array(
 		// uncomment the following to set up database
 		'db'=>array(
 			'class'=>'CDbConnection',
-			'connectionString'=>'mysql:host=127.0.0.1;dbname=itquotes',
+			'connectionString'=>'mysql:host=127.0.0.1;dbname=itquotes_server-27.12.2009',
 			'username'=>'root',
 			'password'=>'system',
 			'enableParamLogging'=>'true',

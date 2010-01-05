@@ -6,11 +6,8 @@ TODO
 - i18n
 * Admin area
   - When list table is too long footer move over it.
-  - When you edit quote make tags editing field like in LJ. The same for author.
-  - quotes/edit. all tags in one line
 * Frontend
   - send email with quote adding notification
-  - Pagination for rss feed
 
 
 REFACTORING

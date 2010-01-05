@@ -45,7 +45,7 @@
 		))), 'id', 'name'),
 		array(
 			'template' => '<span style="white-space: nowrap;">{input} {label}</span>',
-			'separator' => '&nbsp;',
+			'separator' => ' ',
 		)
 	)?>
 	<br /><br />

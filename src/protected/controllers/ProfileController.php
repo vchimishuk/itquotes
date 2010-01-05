@@ -49,7 +49,7 @@ class ProfileController extends CController
 		 * and only authorized users to other actions. 
 		 */
 		if($filterChain->action->id == 'login' && !$user->isGuest) {
-			$this->redirect(array('tag/list'));
+			$this->redirect(array('quote/list'));
 		} elseif($filterChain->action->id != 'login' && $user->isGuest) {
 			$this->redirect(array('login'));
 		}
