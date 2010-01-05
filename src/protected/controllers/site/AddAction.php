@@ -15,6 +15,18 @@ class AddAction extends CAction
 				$quote->notes = $form->author . ' : ' . $form->notes;
 				
 				if($quote->save()) {
+					/*
+					 * Send emaiil with notification to admin.
+					 */
+					$email = Yii::app()->email;
+					$email->type = 'text/plain';
+					$email->to = Yii::app()->params['adminEmail'];
+					$email->subject = 'New quote request.';
+					$email->message = $this->controller->renderPartial('_emailAdd', array(
+												   'quote' => $quote,
+											   ), true);
+					$email->send();
+
 					$this->controller->redirect(array('addThanks'));
 				}
 			}

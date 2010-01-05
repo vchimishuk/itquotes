@@ -76,6 +76,10 @@ return array(
 		'session' => array(
 			'autoStart' => true,		
 		),
+		'email' => array(
+			'class' => 'application.extensions.email.Email',
+			'delivery' => 'php',
+		),
 	),
 
 	// application-level parameters that can be accessed
