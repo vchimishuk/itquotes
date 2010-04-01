@@ -54,7 +54,7 @@ class TagsCloud extends CWidget
 		$tagWeights = array();
 		foreach($tags as $tag) {
 			if($tag->approvedQuotesCount > $minWeight)
-				$tagWeights[$tag->id] = ($fontSizeMax * ($tag->approvedQuotesCount - $minWeight)) / $maxWeight - $minWeight;
+				$tagWeights[$tag->id] = (int)(($fontSizeMax * ($tag->approvedQuotesCount - $minWeight)) / $maxWeight - $minWeight);
 			else
 				$tagWeights[$tag->id] = 1;
 		}

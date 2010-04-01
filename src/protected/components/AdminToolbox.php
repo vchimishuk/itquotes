@@ -37,10 +37,7 @@ class AdminToolbox extends CWidget
 		} elseif($this->controller->id == 'tag') {
 			$staistics['totalCount'] = Tag::model()->count();
 			
-			$criteria = new CDbCriteria();
-			$criteria->order = 'name';
-			$criteria->limit = 10;
-			$tags = Tag::model()->with('quotesCount')->findAll($criteria);
+			$tags = Tag::model()->with('quotesCount')->findAll();
 			
 			// Delete tags with empty quotesCount (With PHP > 5.3 e can use closure here).
 			// TODO: Rewrite this code for PHP 5.3 when it will be avaliable.
@@ -60,14 +57,11 @@ class AdminToolbox extends CWidget
 			}
 			usort($tags, 'tagsSort');
 
-			$staistics['popularTags'] = $tags;			
+			$staistics['popularTags'] = array_slice($tags, 0, 10);
 		} elseif($this->controller->id == 'author') {
 			$staistics['totalCount'] = Author::model()->count();
 			
-			$criteria = new CDbCriteria();
-			$criteria->order = 'name';
-			$criteria->limit = 10;
-			$authors = Author::model()->with('quotesCount')->findAll($criteria);
+			$authors = Author::model()->with('quotesCount')->findAll();
 			
 			// Delete authors with empty quotesCount (With PHP > 5.3 e can use closure here).
 			// TODO: Rewrite this code for PHP 5.3 when it will be avaliable.
@@ -87,7 +81,7 @@ class AdminToolbox extends CWidget
 			}
 			usort($authors, 'authorsSort');
 
-			$staistics['popularAuthors'] = $authors;
+			$staistics['popularAuthors'] = array_slice($authors, 0, 10);
 		}
 		
 		return $staistics;
