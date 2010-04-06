@@ -35,6 +35,11 @@ class LoginForm extends CFormModel
 		);
 	}
 
+	public function safeAttributes()
+	{
+		return array('username', 'password', 'rememberMe');
+	}
+
 	/**
 	 * Authenticates the password.
 	 * This is the 'authenticate' validator as declared in rules().
@@ -42,14 +47,19 @@ class LoginForm extends CFormModel
 	public function authenticate($attribute, $params)
 	{
 		// We only want to authenticate when no input errors.
-		if(!$this->hasErrors()) { 
+		if(!$this->hasErrors()) {
 			$identity = new UserIdentity($this->username, $this->password);
-			
+
 			$identity->authenticate();
 			
 			switch($identity->errorCode) {
 				case UserIdentity::ERROR_NONE:
-					$duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
+					if (!empty($this->rememberMe)) {
+						$duration = Yii::app()->params['persistentLoginTime'] * 24 * 60 * 60;
+					} else {
+						$duration = 0;
+					}
+
 					Yii::app()->user->login($identity, $duration);
 					break;
 					

@@ -88,5 +88,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'voice@root.ua',
+		'persistentLoginTime' => 30, // in days
 	),
 );

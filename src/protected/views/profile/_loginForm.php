@@ -16,9 +16,8 @@
 	))?>
 	<br /><br />
 	
-	<?/*
-	<?=CHtml::checkBox('LoginForm[rememberMe]', true)?> Remember me next time
-	*/?>
+	<?=CHtml::checkBox('LoginForm[rememberMe]', true)?> Remember me on this computer
+	<br /><br />
 	</p>
 	
 	<?=CHtml::submitButton('Login', array(

@@ -7,7 +7,7 @@ class LoginAction extends CAction
 		
 		if(!empty($_POST['LoginForm']) && is_array($_POST['LoginForm'])) {
 			$loginForm->attributes = $_POST['LoginForm'];
-			
+
 			if($loginForm->validate()) {
 				$this->controller->redirect(array('quote/list'));
 				//Yii::app()->request->redirect(Yii::app()->user->returnUrl);
