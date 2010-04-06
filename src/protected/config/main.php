@@ -34,6 +34,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'loginUrl' => 'profile/login',
 		),
 		// uncomment the following to set up database
 		'db'=>array(

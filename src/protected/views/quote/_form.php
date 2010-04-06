@@ -37,17 +37,13 @@
 	<?=CHtml::activeTextField($quote, 'notes')?>
 	<br /><br />
 	
-	<?=CHtml::activeLabelEx($quote, 'tags')?><br />
-	<?=CHtml::checkBoxList('tags',
-		array_keys(CHtml::listData($quote->tags, 'id', 'name')),
-		CHtml::listData(Tag::model()->findAll(new CDbCriteria(array(
-			'order' => 'name',
-		))), 'id', 'name'),
-		array(
-			'template' => '<span style="white-space: nowrap;">{input} {label}</span>',
-			'separator' => ' ',
-		)
-	)?>
+
+	<?=CHtml::activeLabelEx($quote, 'tags')?>
+	<? $this->widget('application.components.SelectableTagsCloud', array(
+ 	  'selectedTags' => $quote->tags,
+  	  'name' => 'tags',
+          'cols' => 5,
+	)); ?>
 	<br /><br />
 	
 	<? if($quote->createdTime): ?>
@@ -61,8 +57,9 @@
 		 <? if($quote->approvedTime): ?>
 		 (<?=CTimestamp::formatDate('d.m.Y H:i', $quote->approvedTime)?>)
 		 <? endif; ?>
+	<br /><br />
 	</p>
-	
+
 	<?=CHtml::submitButton($create ? 'Add' : 'Update', array(
 		'class' => 'button',
 	))?>

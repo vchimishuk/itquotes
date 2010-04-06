@@ -9,10 +9,8 @@ class LoginAction extends CAction
 			$loginForm->attributes = $_POST['LoginForm'];
 			
 			if($loginForm->validate()) {
-				$user = Yii::app()->user;
-				
-				//$user->setFlash('generalMessage', 'You was logged in successfully.');
 				$this->controller->redirect(array('quote/list'));
+				//Yii::app()->request->redirect(Yii::app()->user->returnUrl);
 			} else {
 				$loginForm->username = '';
 				$loginForm->password = '';
