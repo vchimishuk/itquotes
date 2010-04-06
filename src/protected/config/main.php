@@ -70,7 +70,7 @@ return array(
 				'add' => 'site/add',
 				'about' => 'site/about',
 				'rss' => 'site/rss',
-				'tag/<tag:\w+>' => 'site/tag',
+				'tag/<tag:.+>' => 'site/tag',
 				'author/<authorId:\d+>' => 'site/author',
 			),
 		),
