@@ -15,10 +15,10 @@ class RssAction extends CAction
 
 		// Save statistics.
 		$req = new RssRequest();
-		$req->ip = '127.0.0.1';
+		$req->ip = Yii::app()->request->userHostAddress;
 		$req->requestTime = time();
-		$req->userAgent = 'ua';
-		$req->os = 'os';
+		$req->userAgent = Yii::app()->request->userAgent;
+		$req->os = ''; // TODO: Parse UA string and get OS details from it.
 		$req->save();
 
 		$this->controller->render('rss', array(

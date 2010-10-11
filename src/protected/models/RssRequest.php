@@ -5,7 +5,7 @@ class RssRequest extends CActiveRecord
 	/**
 	 * The followings are the available columns in table 'RssRequest':
 	 * @var integer $id
-	 * @var string $requestTime
+	 * @var integer $requestTime
 	 * @var string $userAgent
 	 * @var string $os
 	 * @var string $ip
